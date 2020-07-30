@@ -5,7 +5,6 @@ import { Instagram } from "@styled-icons/fa-brands/Instagram";
 import { WhatsappSquare } from "@styled-icons/fa-brands/WhatsappSquare";
 import { Mail } from "@styled-icons/heroicons-outline/Mail";
 import { fadeIn } from "react-animations";
-import { Fade } from "react-bootstrap";
 
 const Section = styled.section`
   height: calc(100vh - 140px);
