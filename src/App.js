@@ -1,25 +1,57 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { createGlobalStyle } from "styled-components";
+import Contacto from "./pages/Contacto";
+import Home from "./pages/Home";
+import Footer from "./components/Footer";
+import Nav from "components/Nav";
+import NuestrosProductos from "./pages/NuestrosProductos";
+import QuienesSomos from "./pages/QuienesSomos";
+import ZonasDeReparto from "./pages/ZonasDeReparto";
+import Error from "./pages/Error"
+
+const GlobalStyle = createGlobalStyle`
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Nunito', Verdana, Geneva, Tahoma, sans-serif;
+  display: flex;
+  flex-direction: column; 
+  background-color: #171d20;
+  color: #f7f6e7;
+}`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <GlobalStyle />
+      <Nav />
+
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route exact path="/Nosotros">
+          <QuienesSomos />
+        </Route>
+        <Route exact path="/Productos">
+          <NuestrosProductos />
+        </Route>
+        <Route exact path="/Reparto">
+          <ZonasDeReparto />
+        </Route>
+        <Route exact path="/Contacto">
+          <Contacto />
+        </Route>
+        <Route exact path="/Contacto">
+         <Error/>
+        </Route>
+      </Switch>
+
+      <Footer />
+    </Router>
   );
 }
 
