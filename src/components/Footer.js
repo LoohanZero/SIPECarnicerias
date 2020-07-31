@@ -108,7 +108,7 @@ const Footer = () => {
 
         <Link
           target="_blank"
-          href="https://api.whatsapp.com/send?phone=5491141784079"
+          href="mailto: ventas@sipecarnicerias.com"
         >
           <StyledMail />
           ventas@sipecarnicerias.com
