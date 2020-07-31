@@ -4,7 +4,7 @@ import { pulse, fadeInDown, fadeInUp, fadeIn } from "react-animations";
 import mapa from "../imgs/MapaReparto.png";
 
 const Section = styled.section`
-  height: calc(100vh - 140px);
+  height: calc(100vh - 180px);
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -12,7 +12,7 @@ const Section = styled.section`
 `;
 
 const ImageContainer = styled.div`
-  height: calc(100vh - 140px);
+  height: calc(100vh - 180px);
   display: flex;
   align-items: center;
   margin: 0 70px;
@@ -22,7 +22,7 @@ const Image = styled.img`
 `;
 
 const InfoContainer = styled.div`
-  height: calc(100vh - 140px);
+  height: calc(100vh - 180px);
   width: 40%;
   text-align: justify;
   margin-left: 70px;

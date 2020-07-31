@@ -8,7 +8,7 @@ const Container = styled.section`
   background-size: cover;
   background-position: 0% 20%;
   width: 100%;
-  height: calc(100vh - 140px);
+  height: calc(100vh - 180px);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

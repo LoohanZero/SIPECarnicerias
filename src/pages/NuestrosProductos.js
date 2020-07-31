@@ -13,7 +13,7 @@ const InfoContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: calc(100vh - 140px);
+  height: calc(100vh - 180px);
   overflow: hidden;
 `;
 
@@ -42,7 +42,7 @@ const Text = styled.p`
 `;
 
 const Image = styled.img`
-  height: 500px;
+  height: 460px;
   position: relative;
   left: 100px;
 `;

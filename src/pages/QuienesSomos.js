@@ -4,14 +4,14 @@ import { fadeInLeft, zoomIn } from "react-animations";
 import image from "../imgs/Nosotros.jpg";
 
 const Container = styled.section`
-  height: calc(100vh -140px);
+  height: calc(100vh -180px);
   width: 100%;
   display: flex;
 
 `;
 
 const Image = styled.img`
-  height: 586px;
+  height: 546px;
   position: relative;
   left: -87px;
 `;
