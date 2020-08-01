@@ -14,46 +14,88 @@ const StyledFooter = styled.footer`
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-
-  @media (max-width: 450px) {
-    font-size: 10px;
-  }
 `;
 
 const StyledFacebook = styled(Facebook)`
   height: 30px;
-  padding: 0 15px;
+  /* padding: 0 15px; */
 `;
 
 const StyledInstagram = styled(Instagram)`
   height: 30px;
-  padding: 0 15px;
+  /* padding: 0 15px; */
 `;
 
 const StyledWhatsapp = styled(WhatsappSquare)`
   height: 30px;
-  padding: 0 15px;
+  /* padding: 0 15px; */
 `;
 
 const StyledMail = styled(Mail)`
   height: 30px;
-  padding: 0 15px;
+  /* padding: 0 15px; */
 `;
 
 const SocialNetContainer = styled.div`
   display: flex;
   width: 80%;
-  justify-content: space-around;
+  justify-content: center;
+
+  @media (max-width: 1000px) {
+    width: 100%;
+  }
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media (max-width: 450px) {
+    flex-direction: row;
+  }
+
+  @media (max-width: 280px) {
+    width: 80%;
+  }
 `;
 
+const SocialStyledContainer = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+  width: 50%;
+
+  @media (max-width: 800px) {
+    width: 80%;
+    justify-content: center;
+    padding: 5px;
+  }
+
+  @media (max-width: 450px) {
+    width: 25%;
+    justify-content: space-around;
+  }
+
+  @media (max-width: 280px) {
+    width: 50%;
+  }
+`;
 const TelephoneContainer = styled(SocialNetContainer)`
   justify-content: center;
+
+  @media (max-width: 800px) {
+    display: none;
+  }
 `;
 
-const Telephone = styled.p`
+const Text = styled.p`
   font-size: 15px;
   padding: 0 10px;
   margin-bottom: 0;
+
+  @media (max-width: 450px) {
+    display: none;
+  }
 `;
 
 const Copyright = styled.p`
@@ -67,6 +109,9 @@ const Copyright = styled.p`
 `;
 const CopyrightContainer = styled.div`
   display: flex;
+  @media (max-width: 800px) {
+    display: none;
+  }
 `;
 const Link = styled.a`
   cursor: pointer;
@@ -85,41 +130,52 @@ const Link = styled.a`
   }
 `;
 
+const SMLink = styled(Link)`
+  display: flex;
+`;
+
 const Footer = () => {
   return (
     <StyledFooter>
       <SocialNetContainer>
-        <Link target="_blank" href="https://www.facebook.com/sipecarnicerias/">
-          <StyledFacebook />
-          sipecarnicerias
-        </Link>
+        <SocialStyledContainer>
+          <SMLink
+            target="_blank"
+            href="https://www.facebook.com/sipecarnicerias/"
+          >
+            <StyledFacebook />
+            <Text>sipecarnicerias</Text>
+          </SMLink>
 
-        <Link target="_blank" href="https://www.instagram.com/sipecarnicerias/">
-          <StyledInstagram />
-          sipecarnicerias
-        </Link>
+          <SMLink
+            target="_blank"
+            href="https://www.instagram.com/sipecarnicerias/"
+          >
+            <StyledInstagram />
+            <Text>sipecarnicerias</Text>
+          </SMLink>
+        </SocialStyledContainer>
+        <SocialStyledContainer>
+          <SMLink
+            target="_blank"
+            href="https://api.whatsapp.com/send?phone=5491141784079"
+          >
+            <StyledWhatsapp />
+            <Text>+ 54 9 11 4178-4079</Text>
+          </SMLink>
 
-        <Link
-          target="_blank"
-          href="https://api.whatsapp.com/send?phone=5491141784079"
-        >
-          <StyledWhatsapp />+ 54 9 11 4178-4079
-        </Link>
-
-        <Link
-          target="_blank"
-          href="mailto: ventas@sipecarnicerias.com"
-        >
-          <StyledMail />
-          ventas@sipecarnicerias.com
-        </Link>
+          <SMLink target="_blank" href="mailto: ventas@sipecarnicerias.com">
+            <StyledMail />
+            <Text>ventas@sipecarnicerias.com</Text>
+          </SMLink>
+        </SocialStyledContainer>
       </SocialNetContainer>
       <TelephoneContainer>
-        <Telephone>(011) 4748-0283</Telephone>
-        <Telephone>|</Telephone>
-        <Telephone>(011) 4741-6634</Telephone>
-        <Telephone>|</Telephone>
-        <Telephone>(011) 2058-1293</Telephone>
+        <Text>(011) 4748-0283</Text>
+        <Text>|</Text>
+        <Text>(011) 4741-6634</Text>
+        <Text>|</Text>
+        <Text>(011) 2058-1293</Text>
       </TelephoneContainer>
       <CopyrightContainer>
         <Copyright>
