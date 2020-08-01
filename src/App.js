@@ -21,6 +21,7 @@ body {
   flex-direction: column; 
   background-color: #171d20;
   color: #f7f6e7;
+  height: 100vh;
 }`;
 
 function App() {
