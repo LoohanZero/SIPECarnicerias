@@ -16,7 +16,7 @@ const Container = styled.section`
   overflow: hidden;
 
   @media (max-width: 450px) {
-    height: calc(100vh - 120px);
+    height: calc(82vh - 120px);
   }
 `;
 const Title = styled.h1`
