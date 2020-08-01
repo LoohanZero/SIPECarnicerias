@@ -14,6 +14,11 @@ const StyledFooter = styled.footer`
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+
+
+  @media(max-width: 450px) {
+    height: 50px;
+  }
 `;
 
 const StyledFacebook = styled(Facebook)`
@@ -161,7 +166,7 @@ const Footer = () => {
             href="https://api.whatsapp.com/send?phone=5491141784079"
           >
             <StyledWhatsapp />
-            <Text>+ 54 9 11 4178-4079</Text>
+            <Text>11 4178-4079</Text>
           </SMLink>
 
           <SMLink target="_blank" href="mailto: ventas@sipecarnicerias.com">
