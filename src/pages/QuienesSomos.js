@@ -11,7 +11,11 @@ const Container = styled.section`
   align-items: center;
 
   @media (max-height: 700px) {
-    height: 90%;
+    height: 80%;
+  }
+
+  @media (max-height: 600px) {
+    height: 100%;
   }
 `;
 
