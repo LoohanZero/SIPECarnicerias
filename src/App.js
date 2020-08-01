@@ -8,7 +8,7 @@ import Nav from "components/Nav";
 import NuestrosProductos from "./pages/NuestrosProductos";
 import QuienesSomos from "./pages/QuienesSomos";
 import ZonasDeReparto from "./pages/ZonasDeReparto";
-import Error from "./pages/Error"
+import Error from "./pages/Error";
 
 const GlobalStyle = createGlobalStyle`
 * {
@@ -22,6 +22,10 @@ body {
   background-color: #171d20;
   color: #f7f6e7;
   height: 100vh;
+
+  @media(max-width: 450px) {
+    height: calc(100vh - 50px);
+  }
 }`;
 
 function App() {
@@ -47,7 +51,7 @@ function App() {
           <Contacto />
         </Route>
         <Route exact path="/Contacto">
-         <Error/>
+          <Error />
         </Route>
       </Switch>
 
