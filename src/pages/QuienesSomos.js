@@ -1,29 +1,47 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
 import { fadeInLeft, zoomIn } from "react-animations";
-import image from "../imgs/Nosotros.jpg";
+import image from "../imgs/Nosotros1.jpg";
 
 const Container = styled.section`
-  height: calc(100vh -180px);
+  height: calc(100vh - 180px);
   width: 100%;
   display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 
+  @media (max-height: 700px) {
+    height: 90%;
+  }
 `;
 
-const Image = styled.img`
-  height: 546px;
-  position: relative;
-  left: -87px;
-`;
+// const Image = styled.img`
+//   height: 75%;
+// `;
 
+const ImageContainer = styled.div`
+  background-image: url(${image});
+  background-position: 10% center;
+  background-size: 100%;   
+  background-repeat: no-repeat;   
+  height: 70vh;
+  width: 100%;
+
+`;
 const TextContanier = styled.div`
   height: 100%;
-  position: relative;
-  left: -44px;
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @media (max-height: 700px) {
+    height: 50%;
+  }
 `;
 const Title = styled.h2`
   text-align: center;
-  padding: 50px 0 45px 0;
+  padding-bottom: 20px;
   font-size: 30px;
 `;
 const Text = styled.p`
@@ -36,6 +54,9 @@ const fadeInLeftAnimation = keyframes`${fadeInLeft}`;
 
 const FadeInLeftDiv = styled.div`
   animation: 1s ${fadeInLeftAnimation};
+  width: 45%;
+  display: flex;
+  align-items: center;
 `;
 
 const zoomInAnimation = keyframes`${zoomIn}`;
@@ -51,9 +72,12 @@ const ZoomInTextDiv = styled.div`
 const QuienesSomos = () => {
   return (
     <Container>
-      <FadeInLeftDiv>
-        <Image src={image} />
-      </FadeInLeftDiv>
+      
+        <FadeInLeftDiv>
+        <ImageContainer/>
+          {/* <Image src={image} /> */}
+        </FadeInLeftDiv>
+
       <TextContanier>
         <ZoomInTitleDiv>
           <Title>Sobre Nosotros</Title>
