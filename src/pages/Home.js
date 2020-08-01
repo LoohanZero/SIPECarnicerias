@@ -16,15 +16,7 @@ const Container = styled.section`
   overflow: hidden;
 
   @media (max-width: 450px) {
-    height: calc(100vh - 120px);
-  }
-
-  @media (max-width: 411px) {
-    height: calc(80vh - 120px);
-  }
-
-  @media (max-width: 375px) {
-    height: calc(82vh - 120px);
+    height: calc(100vh - 170px);
   }
 `;
 const Title = styled.h1`
