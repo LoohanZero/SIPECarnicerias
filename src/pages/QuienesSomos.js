@@ -14,7 +14,7 @@ const Container = styled.section`
     height: 80%;
   }
 
-  @media (max-height: 600px) {
+  @media (min-height: 600px) {
     height: 100%;
   }
 `;
