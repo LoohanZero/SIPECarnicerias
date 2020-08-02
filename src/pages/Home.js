@@ -89,24 +89,26 @@ const TextContainer = styled.div``;
 
 const Home = () => {
   return (
-    <Container>
-      <FlexContainer>
-        <TextContainer>
-          <FadeInLeftDiv>
-            <Title>
-              <SeparatedTitle>SIPE</SeparatedTitle>
-              <SeparatedTitle>Carnicerías</SeparatedTitle>
-            </Title>
-          </FadeInLeftDiv>
-          <FadeInUpDiv>
-            <Texto>Reparto a domicilio, venta por mayor y menor</Texto>
-          </FadeInUpDiv>
-        </TextContainer>
-        <FadeInRightDiv>
-          <StyledLogo src={logo} />
-        </FadeInRightDiv>
-      </FlexContainer>
-    </Container>
+    logo && (
+      <Container>
+        <FlexContainer>
+          <TextContainer>
+            <FadeInLeftDiv>
+              <Title>
+                <SeparatedTitle>SIPE</SeparatedTitle>
+                <SeparatedTitle>Carnicerías</SeparatedTitle>
+              </Title>
+            </FadeInLeftDiv>
+            <FadeInUpDiv>
+              <Texto>Reparto a domicilio, venta por mayor y menor</Texto>
+            </FadeInUpDiv>
+          </TextContainer>
+          <FadeInRightDiv>
+            <StyledLogo src={logo} />
+          </FadeInRightDiv>
+        </FlexContainer>
+      </Container>
+    )
   );
 };
 
