@@ -54,7 +54,7 @@ const Title = styled.h2`
   }
 
   @media (min-height: 550px) {
-    padding-bottom: 15px;
+    padding-bottom: 25px;
   }
 `;
 const Text = styled.p`
