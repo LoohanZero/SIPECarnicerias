@@ -86,8 +86,7 @@ const DropdownList = styled.ul`
   }
 
   @media (max-width: 450px) {
-    width: 100px;
-    left: -38px;
+    left: -87px;
   }
 
   @media (max-width: 320px) {
@@ -144,7 +143,6 @@ const StyledLink = styled(NavLink)`
   }
 
   @media (max-width: 450px) {
-    font-size: 15px;
     padding: 0;
     display: flex;
     align-items: center;
