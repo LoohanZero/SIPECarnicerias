@@ -23,7 +23,6 @@ const TextContanier = styled.div`
   justify-content: center;
 
   @media(max-width: 700px) {
-
     width: 90%;
   }
 
@@ -54,6 +53,9 @@ const Title = styled.h2`
     font-size: 25px;
   }
 
+  @media (min-height: 550px) {
+    padding-bottom: 15px;
+  }
 `;
 const Text = styled.p`
   text-align: justify;
