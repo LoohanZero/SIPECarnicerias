@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
-import { fadeInLeft, zoomIn } from "react-animations";
-import image from "../imgs/Nosotros1.jpg";
+import { zoomIn } from "react-animations";
+import image from "../imgs/Nosotros.jpg";
 
 const Container = styled.section`
   height: calc(100vh - 180px);
@@ -9,60 +9,57 @@ const Container = styled.section`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  position: relative;
 
-  @media (max-height: 700px) {
-    height: 80%;
-  }
-
-  @media (min-height: 600px) {
+  @media (min-height: 550px) {
     height: 100%;
   }
 `;
 
-// const Image = styled.img`
-//   height: 75%;
-// `;
-
-const ImageContainer = styled.div`
-  background-image: url(${image});
-  background-position: 10% center;
-  background-size: 100%;   
-  background-repeat: no-repeat;   
-  height: 70vh;
-  width: 100%;
-
-`;
 const TextContanier = styled.div`
-  height: 100%;
-  width: 45%;
+  width: 70%;
   display: flex;
   flex-direction: column;
   justify-content: center;
 
-  @media (max-height: 700px) {
-    height: 50%;
+  @media(max-width: 700px) {
+    width: 90%;
   }
 `;
+
+const BackgroundImage = styled.div`
+  z-index: 10;
+  position: absolute;
+  background-image: url(${image});
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  top: 0;
+  left: 0;
+`;
+
 const Title = styled.h2`
   text-align: center;
   padding-bottom: 20px;
   font-size: 30px;
+
+  @media(max-width: 700px) {
+    font-size: 25px;
+  }
+
 `;
 const Text = styled.p`
   text-align: justify;
   margin: 15px 15px;
   font-size: 17px;
+
+  @media(max-width: 700px) {
+    font-size: 15px;
+  }
+
 `;
-
-const fadeInLeftAnimation = keyframes`${fadeInLeft}`;
-
-const FadeInLeftDiv = styled.div`
-  animation: 1s ${fadeInLeftAnimation};
-  width: 45%;
-  display: flex;
-  align-items: center;
-`;
-
 const zoomInAnimation = keyframes`${zoomIn}`;
 
 const ZoomInTitleDiv = styled.div`
@@ -76,11 +73,7 @@ const ZoomInTextDiv = styled.div`
 const QuienesSomos = () => {
   return (
     <Container>
-      
-        <FadeInLeftDiv>
-        <ImageContainer/>
-          {/* <Image src={image} /> */}
-        </FadeInLeftDiv>
+      <BackgroundImage />
 
       <TextContanier>
         <ZoomInTitleDiv>
