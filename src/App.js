@@ -50,8 +50,8 @@ function App() {
         <Route exact path="/Contacto">
           <Contacto />
         </Route>
-        <Route exact path="/Contacto">
-          <Error />
+        <Route>
+          <Error text="Page Not Found"  />
         </Route>
       </Switch>
 

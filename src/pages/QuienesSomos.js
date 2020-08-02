@@ -75,7 +75,7 @@ const ZoomInTitleDiv = styled.div`
 `;
 
 const ZoomInTextDiv = styled.div`
-  animation: 2.5s ${zoomInAnimation};
+  animation: 1.5s ${zoomInAnimation};
 `;
 
 const QuienesSomos = () => {
