@@ -67,7 +67,12 @@ const SocialNetContainer = styled.div`
 const SocialStyledContainer = styled.div`
   display: flex;
   justify-content: space-evenly;
-  width: 50%;
+  width: 35%;
+
+  @media (max-width: 1200px) {
+    width: 50%;
+    padding: 5px;
+  }
 
   @media (max-width: 800px) {
     width: 80%;
@@ -96,6 +101,7 @@ const Text = styled.p`
   font-size: 15px;
   padding: 0 10px;
   margin-bottom: 0;
+  display: flex;
 
   @media (max-width: 450px) {
     display: none;
@@ -104,8 +110,9 @@ const Text = styled.p`
 
 const Copyright = styled.p`
   color: #f7f6e7;
-  font-size: 15px;
+  font-size: 12px;
   margin: 0 3px;
+  display: flex;
 
   @media (max-width: 450px) {
     font-size: 11px;
@@ -117,12 +124,13 @@ const CopyrightContainer = styled.div`
     display: none;
   }
 `;
-const Link = styled.a`
+const SMLink = styled.a`
   cursor: pointer;
   font-family: "Oswald", Verdana, Geneva, Tahoma, sans-serif;
   color: #f7f6e7;
   font-size: 15px;
   text-decoration: none;
+  display: flex;
 
   @media (max-width: 450px) {
     font-size: 11px;
@@ -134,11 +142,14 @@ const Link = styled.a`
   }
 `;
 
-const SMLink = styled(Link)`
-  display: flex;
+const Span = styled.span`
+  font-size: 12px;
 `;
 
-  
+const Link = styled(SMLink)`
+  font-size: 12px;
+  padding: 0 3px;
+`;
 
 const Footer = () => {
   const yearCopyright = new Date().getFullYear();
@@ -146,6 +157,7 @@ const Footer = () => {
   return (
     <StyledFooter>
       <SocialNetContainer>
+
         <SocialStyledContainer>
           <SMLink
             target="_blank"
@@ -154,7 +166,6 @@ const Footer = () => {
             <StyledFacebook />
             <Text>sipecarnicerias</Text>
           </SMLink>
-
           <SMLink
             target="_blank"
             href="https://www.instagram.com/sipecarnicerias/"
@@ -163,6 +174,7 @@ const Footer = () => {
             <Text>sipecarnicerias</Text>
           </SMLink>
         </SocialStyledContainer>
+
         <SocialStyledContainer>
           <SMLink
             target="_blank"
@@ -171,13 +183,14 @@ const Footer = () => {
             <StyledWhatsapp />
             <Text>11 4178-4079</Text>
           </SMLink>
-
           <SMLink target="_blank" href="mailto: ventas@sipecarnicerias.com">
             <StyledMail />
             <Text>ventas@sipecarnicerias.com</Text>
           </SMLink>
         </SocialStyledContainer>
+
       </SocialNetContainer>
+
       <TelephoneContainer>
         <Text>(011) 4748-0283</Text>
         <Text>|</Text>
@@ -185,21 +198,24 @@ const Footer = () => {
         <Text>|</Text>
         <Text>(011) 2058-1293</Text>
       </TelephoneContainer>
+
       <CopyrightContainer>
         <Copyright>
           © {yearCopyright} SIPE Carnicerías. Todos los derechos reservados.
         </Copyright>
         <Copyright>
-          Diseño realizado por{" "}
-          <Link target="_blank" href="https://github.com/LoohanZero">
-            Luján Sanchez
-          </Link>{" "}
+          Diseño realizado por
+          <Span>
+            <Link target="_blank" href="https://github.com/LoohanZero">
+              Luján Sanchez
+            </Link>
+          </Span>
           y
-          <Link target="_blank" href="https://github.com/Jodelrey">
-            {" "}
-            Josefina del Rey
-          </Link>
-          .
+          <Span>
+            <Link target="_blank" href="https://github.com/Jodelrey">
+              Josefina del Rey.
+            </Link>
+          </Span>
         </Copyright>
       </CopyrightContainer>
     </StyledFooter>

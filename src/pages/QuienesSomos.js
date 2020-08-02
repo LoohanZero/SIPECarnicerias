@@ -3,6 +3,7 @@ import styled, { keyframes } from "styled-components";
 import { zoomIn } from "react-animations";
 import image from "../imgs/Nosotros.jpg";
 
+
 const Container = styled.section`
   height: 100%;
   width: 100%;
@@ -75,7 +76,7 @@ const ZoomInTitleDiv = styled.div`
 `;
 
 const ZoomInTextDiv = styled.div`
-  animation: 1.5s ${zoomInAnimation};
+  animation: 1s ${zoomInAnimation};
 `;
 
 const QuienesSomos = () => {
