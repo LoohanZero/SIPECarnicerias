@@ -11,7 +11,11 @@ const Container = styled.section`
   align-items: center;
   position: relative;
 
-  @media (min-height: 550px) {
+  @media (max-height: 551px) {
+    height: calc(100vh - 180px);
+  }
+
+  @media (max-height: 0) and (max-height: 550px) {
     height: 100%;
   }
 `;
@@ -22,7 +26,7 @@ const TextContanier = styled.div`
   flex-direction: column;
   justify-content: center;
 
-  @media(max-width: 700px) {
+  @media (max-width: 700px) {
     width: 90%;
   }
 
@@ -49,7 +53,7 @@ const Title = styled.h2`
   padding-bottom: 20px;
   font-size: 30px;
 
-  @media(max-width: 700px) {
+  @media (max-width: 700px) {
     font-size: 25px;
   }
 
@@ -62,10 +66,9 @@ const Text = styled.p`
   margin: 15px 15px;
   font-size: 17px;
 
-  @media(max-width: 700px) {
+  @media (max-width: 700px) {
     font-size: 15px;
   }
-
 `;
 const zoomInAnimation = keyframes`${zoomIn}`;
 
@@ -79,43 +82,45 @@ const ZoomInTextDiv = styled.div`
 
 const QuienesSomos = () => {
   return (
-    image && <Container>
-      <BackgroundImage />
+    image && (
+      <Container>
+        <BackgroundImage />
 
-      <TextContanier>
-        <ZoomInTitleDiv>
-          <Title>Sobre Nosotros</Title>
-        </ZoomInTitleDiv>
-        <ZoomInTextDiv>
-          <Text>
-            S.I.P.E. Carnicerías es una empresa familiar que cuenta con más de
-            cincuenta años de experiencia en el rubro. Comenzó, como muchas
-            otras, con un pequeño local de barrio en las afueras de Don
-            Torcuato, partido de Tigre y poco a poco logró posicionarse como una
-            de las mejores distribuidoras de carne de Zona Norte.{" "}
-          </Text>
-          <Text>
-            Se destaca principalmente por su reparto diario matutino que hace
-            posible que tanto clientes particulares como renombradas
-            instituciones y restaurantes tengan la mejor mercadería en sus
-            mesas.
-          </Text>
-          <Text>
-            Nuestro principal objetivo es dejar satisfechos a cada uno de
-            nuestros clientes. Es gracias a su confianza y colaboración que
-            podemos decir que llegamos a donde estamos en este momento.{" "}
-          </Text>
-          <Text>
-            ¿Un secreto? El mito dice que la sigla "S.I.P.E." significa
-            "servicios integrales para empresas" pero a nosotros nos resulta
-            sumamente sospechoso que esas letras coincidan también con las
-            iniciales de las dos personas que comenzaron este proyecto. Supongo
-            que siempre nos quedaremos con la duda pero no queríamos ser los
-            únicos en tenerla.
-          </Text>
-        </ZoomInTextDiv>
-      </TextContanier>
-    </Container>
+        <TextContanier>
+          <ZoomInTitleDiv>
+            <Title>Sobre Nosotros</Title>
+          </ZoomInTitleDiv>
+          <ZoomInTextDiv>
+            <Text>
+              S.I.P.E. Carnicerías es una empresa familiar que cuenta con más de
+              cincuenta años de experiencia en el rubro. Comenzó, como muchas
+              otras, con un pequeño local de barrio en las afueras de Don
+              Torcuato, partido de Tigre y poco a poco logró posicionarse como
+              una de las mejores distribuidoras de carne de Zona Norte.{" "}
+            </Text>
+            <Text>
+              Se destaca principalmente por su reparto diario matutino que hace
+              posible que tanto clientes particulares como renombradas
+              instituciones y restaurantes tengan la mejor mercadería en sus
+              mesas.
+            </Text>
+            <Text>
+              Nuestro principal objetivo es dejar satisfechos a cada uno de
+              nuestros clientes. Es gracias a su confianza y colaboración que
+              podemos decir que llegamos a donde estamos en este momento.{" "}
+            </Text>
+            <Text>
+              ¿Un secreto? El mito dice que la sigla "S.I.P.E." significa
+              "servicios integrales para empresas" pero a nosotros nos resulta
+              sumamente sospechoso que esas letras coincidan también con las
+              iniciales de las dos personas que comenzaron este proyecto.
+              Supongo que siempre nos quedaremos con la duda pero no queríamos
+              ser los únicos en tenerla.
+            </Text>
+          </ZoomInTextDiv>
+        </TextContanier>
+      </Container>
+    )
   );
 };
 
