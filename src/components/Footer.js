@@ -15,8 +15,7 @@ const StyledFooter = styled.footer`
   justify-content: space-evenly;
   align-items: center;
 
-
-  @media(max-width: 450px) {
+  @media (max-width: 450px) {
     height: 50px;
   }
 `;
@@ -106,7 +105,7 @@ const Text = styled.p`
 const Copyright = styled.p`
   color: #f7f6e7;
   font-size: 15px;
-  margin: 0 5px;
+  margin: 0 3px;
 
   @media (max-width: 450px) {
     font-size: 11px;
@@ -139,7 +138,11 @@ const SMLink = styled(Link)`
   display: flex;
 `;
 
+  
+
 const Footer = () => {
+  const yearCopyright = new Date().getFullYear();
+
   return (
     <StyledFooter>
       <SocialNetContainer>
@@ -184,7 +187,7 @@ const Footer = () => {
       </TelephoneContainer>
       <CopyrightContainer>
         <Copyright>
-          © 2020 SIPE Carnicerías. Todos los derechos reservados.
+          © {yearCopyright} SIPE Carnicerías. Todos los derechos reservados.
         </Copyright>
         <Copyright>
           Diseño realizado por{" "}
