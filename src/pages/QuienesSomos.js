@@ -4,20 +4,18 @@ import { zoomIn } from "react-animations";
 import image from "../imgs/Nosotros.jpg";
 
 const Container = styled.section`
-  height: calc(100vh - 180px);
+  height: 100%;
   width: 100%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   position: relative;
 
-  @media (max-height: 551px) {
+
+  @media  (min-height: 800px) {
     height: calc(100vh - 180px);
   }
-
-  @media (max-height: 0) and (max-height: 550px) {
-    height: 100%;
-  }
+ 
 `;
 
 const TextContanier = styled.div`
