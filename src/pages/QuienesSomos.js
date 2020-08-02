@@ -23,7 +23,12 @@ const TextContanier = styled.div`
   justify-content: center;
 
   @media(max-width: 700px) {
+
     width: 90%;
+  }
+
+  @media (min-height: 550px) {
+    padding-top: 25px;
   }
 `;
 
@@ -72,7 +77,7 @@ const ZoomInTextDiv = styled.div`
 
 const QuienesSomos = () => {
   return (
-    <Container>
+    image && <Container>
       <BackgroundImage />
 
       <TextContanier>
