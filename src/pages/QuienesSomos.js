@@ -57,7 +57,7 @@ const SectionTitle = styled.h2`
   }
 
   @media (min-height: 550px) {
-    padding-bottom: 25px;
+    padding: 25px 0;
   }
 `;
 
