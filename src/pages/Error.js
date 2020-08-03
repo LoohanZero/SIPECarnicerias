@@ -26,7 +26,8 @@ const Image = styled.img`
   }
 `;
 
-const Info = styled.h1`
+const Info = styled.h2`
+  font-size: 36px;
   padding: 40px;
   color: #f7f6e7;
   text-transform: uppercase;
@@ -40,6 +41,9 @@ const Info = styled.h1`
     font-size: 20px;
   }
 `;
+
+// ------------ANIMATIONS------------
+
 const bounceInDownAnimation = keyframes`${bounceInDown}`;
 
 const BounceInDownDiv = styled.div`

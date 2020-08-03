@@ -3,7 +3,7 @@ import styled, { keyframes } from "styled-components";
 import { fadeInRight, fadeInLeft, fadeInUp } from "react-animations";
 import logo from "../imgs/Logolimpiosf.png";
 
-const Container = styled.section`
+const Section = styled.section`
   background-image: url("../imgs/HomeImage.jpeg");
   background-size: cover;
   background-position: 0% 20%;
@@ -19,18 +19,7 @@ const Container = styled.section`
     height: calc(100vh - 170px);
   }
 `;
-const Title = styled.h1`
-  font-family: "Bitter", Verdana, Geneva, Tahoma, serif;
-  color: #f7f6e7;
-  font-size: 60px;
-  text-align: center;
 
-  @media (max-width: 450px) {
-    font-size: 40px;
-  }
-`;
-
-const SeparatedTitle = styled.div``;
 const FlexContainer = styled.div`
   margin-top: 50px;
   width: 80%;
@@ -43,15 +32,21 @@ const FlexContainer = styled.div`
   }
 `;
 
-const StyledLogo = styled.img`
-  height: 165px;
+
+const Title = styled.h1`
+  font-family: "Bitter", Verdana, Geneva, Tahoma, serif;
+  color: #f7f6e7;
+  font-size: 60px;
+  text-align: center;
 
   @media (max-width: 450px) {
-    height: 110px;
+    font-size: 40px;
   }
 `;
 
-const Texto = styled.p`
+const SeparatedTitle = styled.div``;
+
+const Text = styled.p`
   font-size: 20px;
   font-style: italic;
   color: #f7f6e7;
@@ -66,6 +61,16 @@ const Texto = styled.p`
     margin-bottom: 0;
   }
 `;
+
+const StyledLogo = styled.img`
+  height: 165px;
+
+  @media (max-width: 450px) {
+    height: 110px;
+  }
+`;
+
+// ------------ANIMATIONS-----------
 
 const fadeInRightAnimation = keyframes`${fadeInRight}`;
 
@@ -90,7 +95,7 @@ const TextContainer = styled.div``;
 const Home = () => {
   return (
     logo && (
-      <Container>
+      <Section>
         <FlexContainer>
           <TextContainer>
             <FadeInLeftDiv>
@@ -100,14 +105,14 @@ const Home = () => {
               </Title>
             </FadeInLeftDiv>
             <FadeInUpDiv>
-              <Texto>Reparto a domicilio, venta por mayor y menor</Texto>
+              <Text>Reparto a domicilio, venta por mayor y menor</Text>
             </FadeInUpDiv>
           </TextContainer>
           <FadeInRightDiv>
             <StyledLogo src={logo} />
           </FadeInRightDiv>
         </FlexContainer>
-      </Container>
+      </Section>
     )
   );
 };

@@ -4,7 +4,7 @@ import { zoomIn } from "react-animations";
 import image from "../imgs/Nosotros.jpg";
 
 
-const Container = styled.section`
+const Section = styled.section`
   height: 100%;
   width: 100%;
   display: flex;
@@ -47,7 +47,7 @@ const BackgroundImage = styled.div`
   left: 0;
 `;
 
-const Title = styled.h2`
+const SectionTitle = styled.h2`
   text-align: center;
   padding-bottom: 20px;
   font-size: 30px;
@@ -60,6 +60,7 @@ const Title = styled.h2`
     padding-bottom: 25px;
   }
 `;
+
 const Text = styled.p`
   text-align: justify;
   margin: 15px 15px;
@@ -82,12 +83,12 @@ const ZoomInTextDiv = styled.div`
 const QuienesSomos = () => {
   return (
     image && (
-      <Container>
+      <Section>
         <BackgroundImage />
 
         <TextContanier>
           <ZoomInTitleDiv>
-            <Title>Sobre Nosotros</Title>
+            <SectionTitle>Sobre Nosotros</SectionTitle>
           </ZoomInTitleDiv>
           <ZoomInTextDiv>
             <Text>
@@ -118,7 +119,7 @@ const QuienesSomos = () => {
             </Text>
           </ZoomInTextDiv>
         </TextContanier>
-      </Container>
+      </Section>
     )
   );
 };

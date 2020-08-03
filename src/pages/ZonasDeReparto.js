@@ -11,16 +11,6 @@ const Section = styled.section`
   overflow: hidden;
 `;
 
-const ImageContainer = styled.div`
-  height: calc(100vh - 180px);
-  display: flex;
-  align-items: center;
-  margin: 0 70px;
-`;
-const Image = styled.img`
-  height: 500px;
-`;
-
 const InfoContainer = styled.div`
   height: calc(100vh - 180px);
   width: 40%;
@@ -34,11 +24,6 @@ const UbicationContainer = styled.div`
   flex-direction: column;
   justify-content: center;
 `;
-const BorderContainer = styled.div`
-  border-bottom: 3px solid #bb5a5a;
-  width: 100%;
-  height: 2px;
-`;
 
 const Title = styled.h2`
   font-size: 40px;
@@ -50,6 +35,25 @@ const Title = styled.h2`
 const Text = styled.p`
   font-size: 17px;
 `;
+
+const BorderContainer = styled.div`
+  border-bottom: 3px solid #bb5a5a;
+  width: 100%;
+  height: 2px;
+`;
+
+const ImageContainer = styled.div`
+  height: calc(100vh - 180px);
+  display: flex;
+  align-items: center;
+  margin: 0 70px;
+`;
+const Image = styled.img`
+  height: 500px;
+`;
+
+
+// --------------ANIMATIONS-------------
 
 const pulseAnimation = keyframes`${pulse}`;
 
@@ -83,21 +87,6 @@ const ZonasDeReparto = () => {
       <InfoContainer>
         <FadeInDownDiv>
           <UbicationContainer>
-            <Title>Ubicación</Title>
-            <Text>
-              Ricardo Güiraldes 2183 - Don Torcuato - Partido de Tigre.
-            </Text>
-            <Text>
-              Entre las calles Asunción y España, a unas cuadras de la estación
-              de Don Torcuato viniendo por Av. del Trabajo.
-            </Text>
-          </UbicationContainer>
-        </FadeInDownDiv>
-        <PulseDiv>
-          <BorderContainer />
-        </PulseDiv>
-        <FadeInUpDiv>
-          <UbicationContainer>
             <Title>Reparto</Title>
             <Text>
               Siempre contamos con el afán de expandirnos y alcanzar nuevos
@@ -108,6 +97,21 @@ const ZonasDeReparto = () => {
               Algunas zonas tienen monto de pedido mínimo para clientes
               minoristas así que te recomendamos que nos consultes si la tuya lo
               tiene.
+            </Text>
+          </UbicationContainer>
+        </FadeInDownDiv>
+        <PulseDiv>
+          <BorderContainer />
+        </PulseDiv>
+        <FadeInUpDiv>
+          <UbicationContainer>
+            <Title>Ubicación</Title>
+            <Text>
+              Ricardo Güiraldes 2183 - Don Torcuato - Partido de Tigre.
+            </Text>
+            <Text>
+              Entre las calles Asunción y España, a unas cuadras de la estación
+              de Don Torcuato viniendo por Av. del Trabajo.
             </Text>
           </UbicationContainer>
         </FadeInUpDiv>

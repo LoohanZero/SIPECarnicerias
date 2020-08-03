@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styled, { keyframes }  from "styled-components";
+import styled, { keyframes } from "styled-components";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { fadeIn } from "react-animations";
 import Carousel from "react-bootstrap/Carousel";
@@ -7,6 +7,16 @@ import carne from "../imgs/CarneCuadrada.jpg";
 import pollo from "../imgs/Pollo.jpg";
 import cerdo from "../imgs/CerdoCuadrada.jpg";
 import milanesa from "../imgs/MilanesaCuadrada.jpg";
+
+const Section = styled.section`
+  width: 100%;
+  height: 100%;
+`;
+
+const SectionTitle = styled.h2`
+  padding-top: 50px;
+  text-align: center;
+`;
 
 const InfoContainer = styled.div`
   width: 90%;
@@ -24,13 +34,19 @@ const ImageContainer = styled.div`
   overflow: hidden;
 `;
 
+const Image = styled.img`
+  height: 460px;
+  position: relative;
+  left: 100px;
+`;
+
 const TextContanier = styled.div`
   height: 100%;
   width: 50%;
   padding: 45px;
   /* position: relative; */
 `;
-const Title = styled.h2`
+const ProductTitle = styled.h3`
   text-align: center;
   padding: 50px 0 45px 0;
   font-size: 30px;
@@ -41,17 +57,16 @@ const Text = styled.p`
   font-size: 17px;
 `;
 
-const Image = styled.img`
-  height: 460px;
-  position: relative;
-  left: 100px;
-`;
+// --------------ANIMATIONS---------------
 
 const fadeInAnimation = keyframes`${fadeIn}`;
 
 const FadeInDiv = styled.div`
   animation: 1.5s ${fadeInAnimation};
 `;
+
+
+// -------------CAROUSEL---------------
 
 const ControlledCarousel = () => {
   const [index, setIndex] = useState(0);
@@ -67,7 +82,7 @@ const ControlledCarousel = () => {
             <Image src={carne} />
           </ImageContainer>
           <TextContanier>
-            <Title>Carne Vacuna</Title>
+            <ProductTitle>Carne Vacuna</ProductTitle>
             <Text>
               Contamos con carne de novillo especialmente seleccionada y de
               primera calidad. Cada res adquirida es despostada por nuestros
@@ -89,7 +104,7 @@ const ControlledCarousel = () => {
             <Image src={pollo} />
           </ImageContainer>
           <TextContanier>
-            <Title>Productos Avícolas</Title>
+            <ProductTitle>Productos Avícolas</ProductTitle>
             <Text>
               Para que a tu mesa solo lleguen los mejores pollos, sólo
               adquirimos las mejores y más reconocidas marcas. Y somos tan
@@ -110,7 +125,7 @@ const ControlledCarousel = () => {
             <Image src={cerdo} />
           </ImageContainer>
           <TextContanier>
-            <Title>Carne de Cerdo</Title>
+            <ProductTitle>Carne de Cerdo</ProductTitle>
             <Text>
               Brindamos también la mejor calidad en carne de cerdo. De origen
               nacional así como también traída especialmente desde el exterior
@@ -130,7 +145,7 @@ const ControlledCarousel = () => {
             <Image src={milanesa} />
           </ImageContainer>
           <TextContanier>
-            <Title>Rebozados</Title>
+            <ProductTitle>Rebozados</ProductTitle>
             <Text>
               Tenemos de varios tipos, algunos realizados por nosotros. Otros
               conseguidos a través de nuestros proveedores.
@@ -148,11 +163,18 @@ const ControlledCarousel = () => {
   );
 };
 
+
+// ------------------PAGE DISPLAY -----------------
+
+
 const NuestrosProductos = () => {
   return (
-    <FadeInDiv>
-      <ControlledCarousel />
-    </FadeInDiv>
+    <Section>
+      <SectionTitle>Nuestros Productos</SectionTitle>
+      <FadeInDiv>
+        <ControlledCarousel />
+      </FadeInDiv>
+    </Section>
   );
 };
 

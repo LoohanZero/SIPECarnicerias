@@ -16,8 +16,9 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   width: 20%;
+  height: 100%;
 
   @media (max-width: 710px) {
     flex-direction: row;
@@ -30,6 +31,25 @@ const Container = styled.div`
   }
 `;
 
+const Image = styled.img`
+  height: 35px;
+
+  @media (max-width: 320px) {
+    height: 25px;
+  }
+`;
+
+const Text = styled.h1`
+  font-size: 15px;
+  font-family: "Oswald", Verdana, Geneva, Tahoma, sans-serif;
+  padding: 0 10px;
+  margin: 0;
+
+  @media (max-width: 320px) {
+    line-height: 25px;
+  }
+`;
+
 const ResponsiveNav = styled.div`
   display: flex;
   justify-content: space-evenly;
@@ -38,6 +58,55 @@ const ResponsiveNav = styled.div`
 
   @media (max-width: 710px) {
     display: none;
+  }
+`;
+const StyledLink = styled(NavLink)`
+  font-family: "Oswald", Verdana, Geneva, Tahoma, sans-serif;
+  color: #f7f6e7;
+  text-decoration: none;
+  transition: 0.3s;
+  padding: 15px;
+  font-size: 25px;
+  width: 200px;
+  height: 100%;
+  text-align: center;
+
+  @media (max-width: 1120px) {
+    font-size: 20px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media (max-width: 900px) {
+    width: 120px;
+  }
+
+  @media (max-width: 450px) {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media (max-width: 280px) {
+    font-size: 13px;
+  }
+
+  &:hover {
+    text-decoration: none;
+    color: #b8b0b0;
+    transition: 0.3s;
+  }
+
+  &:active {
+    text-decoration: none;
+    color: #f7f6e7;
+  }
+
+  &.selected {
+    background-color: #3f4a4e;
   }
 `;
 
@@ -99,75 +168,6 @@ const DropdownItem = styled.li`
   height: 70px;
   display: flex;
 `;
-
-const Image = styled.img`
-  height: 35px;
-
-  @media (max-width: 320px) {
-    height: 25px;
-  }
-`;
-
-const Text = styled.h1`
-  font-size: 15px;
-  font-family: "Oswald", Verdana, Geneva, Tahoma, sans-serif;
-  padding: 0 10px;
-  margin: 0;
-
-  @media (max-width: 320px) {
-    line-height: 25px;
-  }
-`;
-
-const StyledLink = styled(NavLink)`
-  font-family: "Oswald", Verdana, Geneva, Tahoma, sans-serif;
-  color: #f7f6e7;
-  text-decoration: none;
-  transition: 0.3s;
-  padding: 15px;
-  font-size: 25px;
-  width: 200px;
-  height: 100%;
-  text-align: center;
-
-  @media (max-width: 1120px) {
-    font-size: 20px;
-    width: 150px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  @media (max-width: 900px) {
-    width: 120px;
-  }
-
-  @media (max-width: 450px) {
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  @media (max-width: 280px) {
-    font-size: 13px;
-  }
-
-  &:hover {
-    text-decoration: none;
-    color: #b8b0b0;
-    transition: 0.3s;
-  }
-
-  &:active {
-    text-decoration: none;
-    color: #f7f6e7;
-  }
-
-  &.selected {
-    background-color: #3f4a4e;
-  }
-`;
 const DropdownLink = styled(StyledLink)`
   width: 200px;
 
@@ -208,6 +208,7 @@ const Nav = () => {
           Contacto
         </StyledLink>
       </ResponsiveNav>
+
       <DropdownMenu>
         <StyledMenu onClick={handleMenuClick} />
 

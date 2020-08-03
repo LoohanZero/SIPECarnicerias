@@ -20,26 +20,6 @@ const StyledFooter = styled.footer`
   }
 `;
 
-const StyledFacebook = styled(Facebook)`
-  height: 30px;
-  /* padding: 0 15px; */
-`;
-
-const StyledInstagram = styled(Instagram)`
-  height: 30px;
-  /* padding: 0 15px; */
-`;
-
-const StyledWhatsapp = styled(WhatsappSquare)`
-  height: 30px;
-  /* padding: 0 15px; */
-`;
-
-const StyledMail = styled(Mail)`
-  height: 30px;
-  /* padding: 0 15px; */
-`;
-
 const SocialNetContainer = styled.div`
   display: flex;
   width: 80%;
@@ -89,41 +69,7 @@ const SocialStyledContainer = styled.div`
     width: 50%;
   }
 `;
-const TelephoneContainer = styled(SocialNetContainer)`
-  justify-content: center;
 
-  @media (max-width: 800px) {
-    display: none;
-  }
-`;
-
-const Text = styled.p`
-  font-size: 15px;
-  padding: 0 10px;
-  margin-bottom: 0;
-  display: flex;
-
-  @media (max-width: 450px) {
-    display: none;
-  }
-`;
-
-const Copyright = styled.p`
-  color: #f7f6e7;
-  font-size: 12px;
-  margin: 0 3px;
-  display: flex;
-
-  @media (max-width: 450px) {
-    font-size: 11px;
-  }
-`;
-const CopyrightContainer = styled.div`
-  display: flex;
-  @media (max-width: 800px) {
-    display: none;
-  }
-`;
 const SMLink = styled.a`
   cursor: pointer;
   font-family: "Oswald", Verdana, Geneva, Tahoma, sans-serif;
@@ -142,6 +88,63 @@ const SMLink = styled.a`
   }
 `;
 
+const StyledFacebook = styled(Facebook)`
+  height: 30px;
+
+`;
+
+const StyledInstagram = styled(Instagram)`
+  height: 30px;
+  
+`;
+
+const StyledWhatsapp = styled(WhatsappSquare)`
+  height: 30px;
+
+`;
+
+const StyledMail = styled(Mail)`
+  height: 30px;
+ 
+`;
+
+const Text = styled.p`
+  font-size: 15px;
+  padding: 0 10px;
+  margin-bottom: 0;
+  display: flex;
+
+  @media (max-width: 450px) {
+    display: none;
+  }
+`;
+
+const TelephoneContainer = styled(SocialNetContainer)`
+  justify-content: center;
+
+  @media (max-width: 800px) {
+    display: none;
+  }
+`;
+
+const CopyrightContainer = styled.div`
+  display: flex;
+  @media (max-width: 800px) {
+    display: none;
+  }
+`;
+
+const Copyright = styled.p`
+  color: #f7f6e7;
+  font-size: 12px;
+  margin: 0 3px;
+  display: flex;
+
+  @media (max-width: 450px) {
+    font-size: 11px;
+  }
+`;
+
 const Span = styled.span`
   font-size: 12px;
 `;
@@ -157,7 +160,6 @@ const Footer = () => {
   return (
     <StyledFooter>
       <SocialNetContainer>
-
         <SocialStyledContainer>
           <SMLink
             target="_blank"
@@ -188,7 +190,6 @@ const Footer = () => {
             <Text>ventas@sipecarnicerias.com</Text>
           </SMLink>
         </SocialStyledContainer>
-
       </SocialNetContainer>
 
       <TelephoneContainer>
