@@ -11,11 +11,25 @@ import milanesa from "../imgs/MilanesaCuadrada.jpg";
 const Section = styled.section`
   width: 100%;
   height: 85%;
+
+  @media (max-width: 1024px) and (max-height: 1366px) {
+    height: 90%;
+  }
+
+  @media (max-width: 300px) {
+    height: 100%;
+  }
 `;
 
-const SectionTitle = styled.h2`
-  padding-top: 50px;
+const SectionTitle = styled.h1`
   text-align: center;
+  padding-top: 50px;
+  margin: 0;
+
+  @media (max-width: 450px) {
+    padding-top: 25px;
+    font-size: 30px;
+  }
 `;
 
 const InfoContainer = styled.div`
@@ -25,6 +39,39 @@ const InfoContainer = styled.div`
   align-items: center;
   height: calc(100vh - 180px);
   overflow: hidden;
+
+  @media (max-width: 500px) {
+    width: 100%;
+  }
+`;
+
+const BackgroundImage = styled.div`
+  display: none;
+  z-index: 10;
+  position: absolute;
+  background-image: url(${(props) => props.url});
+  background-repeat: no-repeat;
+  background-position: 15%;
+  background-size: cover;
+  width: 100%;
+  height: 90%;
+  opacity: 0.2;
+  top: 25px;
+  left: 0;
+
+  @media (max-width: 1024px) {
+    display: block;
+  }
+
+  @media (max-width: 400px) {
+    top: 0;
+    height: 100%;
+  }
+
+  @media (max-width: 280px) {
+    top: 50px;
+    height: 90%;
+  }
 `;
 
 const ImageContainer = styled.div`
@@ -32,29 +79,84 @@ const ImageContainer = styled.div`
   display: flex;
   justify-content: center;
   overflow: hidden;
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
 `;
 
 const Image = styled.img`
   height: 460px;
   position: relative;
   left: 100px;
+
+  @media (max-height: 700px) {
+    height: 380px;
+  }
 `;
 
 const TextContanier = styled.div`
   height: 100%;
   width: 50%;
   padding: 45px;
-  /* position: relative; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: 1024px) {
+    width: 80%;
+    height: 80%;
+    position: relative;
+    left: 50px;
+  }
+  @media (max-width: 700px) {
+    left: 35px;
+  }
+
+  @media (max-width: 500px) {
+    width: 100%;
+    height: 80%;
+    left: 0;
+    padding: 0 35px;
+  }
+  @media (max-width: 320px) {
+    height: 100%;
+  }
 `;
 const ProductTitle = styled.h3`
   text-align: center;
-  padding: 50px 0 45px 0;
+  padding-bottom: 30px;
   font-size: 30px;
+  margin: 0;
+
+  @media (max-width: 400px) {
+    font-size: 25px;
+    padding-bottom: 15px;
+  }
 `;
 const Text = styled.p`
   text-align: justify;
-  margin: 15px 15px;
+  margin: 15px;
   font-size: 17px;
+
+  @media (max-width: 1024px) {
+    font-size: 20px;
+  }
+
+  @media (max-width: 700px) {
+    font-size: 17px;
+  }
+
+  @media (max-width: 450px) {
+    margin: 0 15px;
+    font-size: 15px;
+  }
+
+  @media (max-width: 320px) {
+    margin: 0 10px;
+    font-size: 13px;
+  }
 `;
 
 // --------------ANIMATIONS---------------
@@ -81,6 +183,7 @@ const ControlledCarousel = () => {
             <Image src={carne} />
           </ImageContainer>
           <TextContanier>
+            <BackgroundImage url={carne} />
             <ProductTitle>Carne Vacuna</ProductTitle>
             <Text>
               Contamos con carne de novillo especialmente seleccionada y de
@@ -103,6 +206,7 @@ const ControlledCarousel = () => {
             <Image src={pollo} />
           </ImageContainer>
           <TextContanier>
+            <BackgroundImage url={pollo} />
             <ProductTitle>Productos Avícolas</ProductTitle>
             <Text>
               Para que a tu mesa solo lleguen los mejores pollos, sólo
@@ -124,16 +228,15 @@ const ControlledCarousel = () => {
             <Image src={cerdo} />
           </ImageContainer>
           <TextContanier>
+            <BackgroundImage url={cerdo} />
             <ProductTitle>Carne de Cerdo</ProductTitle>
             <Text>
               Brindamos también la mejor calidad en carne de cerdo. De origen
               nacional así como también traída especialmente desde el exterior
               por nuestros proveedores.
             </Text>
-            <Text>
-              ¿Churrasquito de cerdo?¿Ribs?¿Lechón? Por supuesto que sí. Lo que
-              quieras.
-            </Text>
+            <Text>¿Churrasquito de cerdo?¿Ribs?¿Lechón?</Text>
+            <Text>Por supuesto que sí. Lo que quieras.</Text>
           </TextContanier>
         </InfoContainer>
         {/* <Carousel.Caption></Carousel.Caption> */}
@@ -144,6 +247,7 @@ const ControlledCarousel = () => {
             <Image src={milanesa} />
           </ImageContainer>
           <TextContanier>
+            <BackgroundImage url={milanesa} />
             <ProductTitle>Rebozados</ProductTitle>
             <Text>
               Tenemos de varios tipos, algunos realizados por nosotros. Otros

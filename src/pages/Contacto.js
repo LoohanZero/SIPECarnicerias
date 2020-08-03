@@ -22,9 +22,13 @@ const Section = styled.section`
 
 `;
 
-const SectionTitle = styled.h2`
-  padding-top: 50px;
+const SectionTitle = styled.h1`
   text-align: center;
+
+
+  @media(max-width: 450px) {
+    padding-top: 50px;
+  }
 `;
 
 const FormContainer = styled.form`

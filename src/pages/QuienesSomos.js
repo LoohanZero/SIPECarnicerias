@@ -47,7 +47,7 @@ const BackgroundImage = styled.div`
   left: 0;
 `;
 
-const SectionTitle = styled.h2`
+const SectionTitle = styled.h1`
   text-align: center;
   padding-bottom: 20px;
   font-size: 30px;
