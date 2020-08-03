@@ -22,6 +22,23 @@ const FormContainer = styled.form`
   justify-content: space-around;
   align-items: center;
   width: 40%;
+
+  @media(max-width: 1200px) {
+    width: 50%;
+  }
+
+  @media(max-width: 850px) {
+    width: 60%;
+  }
+
+  @media(max-width: 600px) {
+    width: 80%;
+  }
+
+  @media(max-width: 450px) {
+    width: 90%;
+  }
+
 `;
 const FormStyles = styled.div`
   width: 100%;
