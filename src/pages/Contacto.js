@@ -9,6 +9,16 @@ const Section = styled.section`
   align-items: center;
   justify-content: center;
   font-family: "Oswald", Verdana, Geneva, Tahoma, sans-serif;
+
+
+  @media  (min-height: 800px) {
+    height: calc(100vh - 180px);
+  }
+
+  @media  (max-width: 411px) {
+    height: 105%;
+  }
+
 `;
 
 const SectionTitle = styled.h2`
