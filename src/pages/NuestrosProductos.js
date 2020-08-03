@@ -10,7 +10,7 @@ import milanesa from "../imgs/MilanesaCuadrada.jpg";
 
 const Section = styled.section`
   width: 100%;
-  height: 100%;
+  height: 85%;
 `;
 
 const SectionTitle = styled.h2`
@@ -64,7 +64,6 @@ const fadeInAnimation = keyframes`${fadeIn}`;
 const FadeInDiv = styled.div`
   animation: 1.5s ${fadeInAnimation};
 `;
-
 
 // -------------CAROUSEL---------------
 
@@ -163,18 +162,21 @@ const ControlledCarousel = () => {
   );
 };
 
-
 // ------------------PAGE DISPLAY -----------------
-
 
 const NuestrosProductos = () => {
   return (
-    <Section>
-      <SectionTitle>Nuestros Productos</SectionTitle>
-      <FadeInDiv>
-        <ControlledCarousel />
-      </FadeInDiv>
-    </Section>
+    carne &&
+    pollo &&
+    cerdo &&
+    milanesa && (
+      <Section>
+        <SectionTitle>Nuestros Productos</SectionTitle>
+        <FadeInDiv>
+          <ControlledCarousel />
+        </FadeInDiv>
+      </Section>
+    )
   );
 };
 

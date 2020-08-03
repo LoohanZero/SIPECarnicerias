@@ -40,7 +40,7 @@ const SocialNetContainer = styled.div`
   }
 
   @media (max-width: 280px) {
-    width: 80%;
+    width: 90%;
   }
 `;
 
@@ -61,7 +61,7 @@ const SocialStyledContainer = styled.div`
   }
 
   @media (max-width: 450px) {
-    width: 25%;
+    width: 40%;
     justify-content: space-around;
   }
 

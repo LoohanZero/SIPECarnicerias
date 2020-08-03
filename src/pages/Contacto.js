@@ -43,6 +43,7 @@ const FormInput = styled.input`
   font-size: 17px;
   padding-left: 10px;
   margin-top: 4px;
+  border: 2px solid #171d20;
 
   &:hover {
     border: 2px solid #76939d;
@@ -62,6 +63,7 @@ const Textarea = styled.textarea`
   padding: 5px 10px;
   transition: 0.3s;
   margin-top: 4px;
+  border: 2px solid #171d20;
 
   &:hover {
     border: 2px solid #76939d;
