@@ -47,7 +47,7 @@ const InfoContainer = styled.div`
 
 const BackgroundImage = styled.div`
   display: none;
-  z-index: 10;
+  z-index: 1;
   position: absolute;
   background-image: url(${(props) => props.url});
   background-repeat: no-repeat;
@@ -106,7 +106,7 @@ const TextContanier = styled.div`
 
   @media (max-width: 1024px) {
     width: 80%;
-    height: 80%;
+    height: 90%;
     position: relative;
     left: 50px;
   }
