@@ -23,22 +23,21 @@ const FormContainer = styled.form`
   align-items: center;
   width: 40%;
 
-  @media(max-width: 1200px) {
+  @media (max-width: 1200px) {
     width: 50%;
   }
 
-  @media(max-width: 850px) {
+  @media (max-width: 850px) {
     width: 60%;
   }
 
-  @media(max-width: 600px) {
+  @media (max-width: 600px) {
     width: 80%;
   }
 
-  @media(max-width: 450px) {
+  @media (max-width: 450px) {
     width: 90%;
   }
-
 `;
 const FormStyles = styled.div`
   width: 100%;
@@ -61,12 +60,15 @@ const FormInput = styled.input`
   padding-left: 10px;
   margin-top: 4px;
   border: 2px solid #171d20;
+  transition: 0.3s;
 
   &:hover {
     border: 2px solid #76939d;
+    transition: 0.3s;
   }
   &:invalid:not(:placeholder-shown) {
     border: 2px solid #bb5a5a;
+    transition: 0.3s;
   }
 `;
 
