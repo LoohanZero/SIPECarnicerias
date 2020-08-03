@@ -114,7 +114,7 @@ const QuienesSomos = () => {
               "servicios integrales para empresas" pero a nosotros nos resulta
               sumamente sospechoso que esas letras coincidan también con las
               iniciales de las dos personas que comenzaron este proyecto.
-              Supongo que siempre nos quedaremos con la duda pero no queríamos
+              Suponemos que siempre nos quedaremos con la duda pero no queríamos
               ser los únicos en tenerla.
             </Text>
           </ZoomInTextDiv>
