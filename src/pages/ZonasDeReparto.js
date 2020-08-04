@@ -15,7 +15,7 @@ const Section = styled.section`
     height: calc(100vh - 180px);
   }
 
-  @media (max-width: 720px) and (min-height: 1480px) {
+  @media (max-width: 800px) and (min-height: 1280px) {
     height: calc(100vh - 180px);
   }
 `;
