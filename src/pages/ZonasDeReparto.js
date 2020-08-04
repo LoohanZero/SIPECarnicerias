@@ -134,6 +134,10 @@ const FadeInDiv = styled.div`
     justify-content: center;
   }
 
+  @media (max-width: 725px) {
+    margin-top: 25px;
+  }
+
   @media (max-width: 450px) {
     width: 95%;
     margin-top: 15px;
