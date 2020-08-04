@@ -1,6 +1,7 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
 import { fadeIn } from "react-animations";
+import asado from "../imgs/AsadoContacto.jpeg";
 
 const Section = styled.section`
   height: 100%;
@@ -9,24 +10,37 @@ const Section = styled.section`
   align-items: center;
   justify-content: center;
   font-family: "Oswald", Verdana, Geneva, Tahoma, sans-serif;
+  overflow: hidden;
+  position: relative;
 
-
-  @media  (min-height: 800px) {
+  @media (min-height: 800px) {
     height: calc(100vh - 180px);
   }
 
-  @media  (max-width: 411px) {
+  @media (max-width: 411px) {
     height: 105%;
     padding-bottom: 50px;
   }
+`;
 
+const BackgroundImage = styled.div`
+  z-index: 1;
+  position: absolute;
+  background-image: url(${asado});
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; 
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  top: 0;
+  left: 0;
 `;
 
 const SectionTitle = styled.h1`
   text-align: center;
 
-
-  @media(max-width: 450px) {
+  @media (max-width: 450px) {
     padding-top: 50px;
   }
 `;
@@ -37,6 +51,7 @@ const FormContainer = styled.form`
   justify-content: space-around;
   align-items: center;
   width: 40%;
+  z-index: 10;
 
   @media (max-width: 1200px) {
     width: 50%;
@@ -201,6 +216,7 @@ const Contacto = () => {
           <SendButton type="submit">Enviar</SendButton>
         </FadeInDiv>
       </FormContainer>
+      <BackgroundImage />
     </Section>
   );
 };

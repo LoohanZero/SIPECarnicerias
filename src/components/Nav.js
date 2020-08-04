@@ -11,6 +11,7 @@ const StyledNav = styled.nav`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+ 
 `;
 const Container = styled.div`
   display: flex;
