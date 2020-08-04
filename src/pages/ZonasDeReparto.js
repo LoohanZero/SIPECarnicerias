@@ -14,6 +14,10 @@ const Section = styled.section`
   @media (max-width: 1024px) and (min-height: 1366px) {
     height: calc(100vh - 180px);
   }
+
+  @media (max-width: 720px) and (min-height: 1480px) {
+    height: calc(100vh - 180px);
+  }
 `;
 
 const InfoContainer = styled.div`
@@ -132,10 +136,6 @@ const FadeInDiv = styled.div`
     width: 80%;
     align-items: center;
     justify-content: center;
-  }
-
-  @media (max-width: 725px) {
-    margin-top: 25px;
   }
 
   @media (max-width: 450px) {
