@@ -4,6 +4,7 @@ import { Facebook } from "@styled-icons/entypo-social/Facebook";
 import { Instagram } from "@styled-icons/fa-brands/Instagram";
 import { WhatsappSquare } from "@styled-icons/fa-brands/WhatsappSquare";
 import { Mail } from "@styled-icons/heroicons-outline/Mail";
+import { Phone } from "@styled-icons/boxicons-solid/Phone";
 
 const StyledFooter = styled.footer`
   font-family: "Oswald", Verdana, Geneva, Tahoma, sans-serif;
@@ -61,7 +62,7 @@ const SocialStyledContainer = styled.div`
   }
 
   @media (max-width: 450px) {
-    width: 40%;
+    width: 35%;
     justify-content: space-around;
   }
 
@@ -88,24 +89,31 @@ const SMLink = styled.a`
   }
 `;
 
+const SMPhoneLink = styled(SMLink)`
+  display: none;
+
+  @media (max-width: 450px) {
+    display: block;
+  }
+`;
 const StyledFacebook = styled(Facebook)`
   height: 30px;
+`;
+const StyledPhone = styled(Phone)`
+  height: 30px;
+
 
 `;
-
 const StyledInstagram = styled(Instagram)`
   height: 30px;
-  
 `;
 
 const StyledWhatsapp = styled(WhatsappSquare)`
   height: 30px;
-
 `;
 
 const StyledMail = styled(Mail)`
   height: 30px;
- 
 `;
 
 const Text = styled.p`
@@ -190,6 +198,9 @@ const Footer = () => {
             <Text>ventas@sipecarnicerias.com</Text>
           </SMLink>
         </SocialStyledContainer>
+        <SMPhoneLink target="_blank" href="tel:1147480283">
+          <StyledPhone />
+        </SMPhoneLink>
       </SocialNetContainer>
 
       <TelephoneContainer>
