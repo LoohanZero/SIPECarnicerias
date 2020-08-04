@@ -2,9 +2,10 @@ import React from "react";
 import styled, { keyframes } from "styled-components";
 import { fadeInRight, fadeInLeft, fadeInUp } from "react-animations";
 import logo from "../imgs/Logolimpiosf.png";
+import homeImage from "../imgs/HomeImage.jpeg";
 
 const Section = styled.section`
-  background-image: url("../imgs/HomeImage.jpeg");
+  background-image: url(${homeImage});
   background-size: cover;
   background-position: 0% 20%;
   width: 100%;
