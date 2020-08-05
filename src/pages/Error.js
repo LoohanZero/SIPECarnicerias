@@ -47,13 +47,13 @@ const Info = styled.h2`
 const bounceInDownAnimation = keyframes`${bounceInDown}`;
 
 const BounceInDownDiv = styled.div`
-  animation: 1s ${bounceInDownAnimation};
+  animation: 0.5s ${bounceInDownAnimation};
 `;
 
 const headShakeAnimation = keyframes`${headShake}`;
 
 const HeadShakeDiv = styled.div`
-  animation: 1.5s ${headShakeAnimation} 0.9s;
+  animation: 1s ${headShakeAnimation} 0.9s;
 `;
 const Error = ({ text }) => {
   return (

@@ -164,7 +164,7 @@ const Text = styled.p`
 const fadeInAnimation = keyframes`${fadeIn}`;
 
 const FadeInDiv = styled.div`
-  animation: 1.5s ${fadeInAnimation};
+  animation: 0.5s ${fadeInAnimation};
 `;
 
 // -------------CAROUSEL---------------

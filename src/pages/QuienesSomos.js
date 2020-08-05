@@ -73,11 +73,11 @@ const Text = styled.p`
 const zoomInAnimation = keyframes`${zoomIn}`;
 
 const ZoomInTitleDiv = styled.div`
-  animation: 1s ${zoomInAnimation};
+  animation: 0.5s ${zoomInAnimation};
 `;
 
 const ZoomInTextDiv = styled.div`
-  animation: 1s ${zoomInAnimation};
+  animation: 0.5s ${zoomInAnimation};
 `;
 
 const QuienesSomos = () => {

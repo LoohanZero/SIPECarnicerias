@@ -152,7 +152,7 @@ const SendButton = styled.button`
 const fadeInAnimation = keyframes`${fadeIn}`;
 
 const FadeInDiv = styled.div`
-  animation: 1.5s ${fadeInAnimation};
+  animation: 0.5s ${fadeInAnimation};
   width: 100%;
   display: flex;
   flex-direction: column;

@@ -15,7 +15,7 @@ const Section = styled.section`
     height: calc(100vh - 180px);
   }
 
-  @media  (min-height: 800px) {
+  @media (min-height: 800px) {
     height: calc(100vh - 180px);
   }
 `;
@@ -93,7 +93,7 @@ const ImageContainer = styled.div`
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: center; 
+  justify-content: center;
 `;
 
 const Image = styled.img`
@@ -111,13 +111,13 @@ const Image = styled.img`
 const pulseAnimation = keyframes`${pulse}`;
 
 const PulseDiv = styled.div`
-  animation: 1.5s ${pulseAnimation};
+  animation: 0.5s ${pulseAnimation};
 `;
 
 const fadeInDownAnimation = keyframes`${fadeInDown}`;
 
 const FadeInDownDiv = styled.div`
-  animation: 1.5s ${fadeInDownAnimation};
+  animation: 0.5s ${fadeInDownAnimation};
   height: 49%;
 
   @media (max-width: 411px) {
@@ -128,11 +128,10 @@ const FadeInDownDiv = styled.div`
 const fadeInAnimation = keyframes`${fadeIn}`;
 
 const FadeInDiv = styled.div`
-  animation: 2.5s ${fadeInAnimation};
+  animation: 0.5s ${fadeInAnimation};
   width: 45%;
- 
 
-  @media(max-width: 1200px) {
+  @media (max-width: 1200px) {
     width: 80%;
     align-items: center;
     justify-content: center;
@@ -144,11 +143,10 @@ const FadeInDiv = styled.div`
   }
 `;
 
-
 const fadeInUpAnimation = keyframes`${fadeInUp}`;
 
 const FadeInUpDiv = styled.div`
-  animation: 1.5s ${fadeInUpAnimation};
+  animation: 0.5s ${fadeInUpAnimation};
   height: 49%;
 `;
 

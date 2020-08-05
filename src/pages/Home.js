@@ -76,19 +76,19 @@ const StyledLogo = styled.img`
 const fadeInRightAnimation = keyframes`${fadeInRight}`;
 
 const FadeInRightDiv = styled.div`
-  animation: 1s ${fadeInRightAnimation};
+  animation: 0.5s ${fadeInRightAnimation};
 `;
 
 const fadeInLeftAnimation = keyframes`${fadeInLeft}`;
 
 const FadeInLeftDiv = styled.div`
-  animation: 1s ${fadeInLeftAnimation};
+  animation: 0.5s ${fadeInLeftAnimation};
 `;
 
 const fadeInUpAnimation = keyframes`${fadeInUp}`;
 
 const FadeInUpDiv = styled.div`
-  animation: 1s ${fadeInUpAnimation};
+  animation: 0.5s ${fadeInUpAnimation};
 `;
 
 const TextContainer = styled.div``;
