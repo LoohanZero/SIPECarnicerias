@@ -216,7 +216,7 @@ const Footer = () => {
         <Copyright>
           Diseño realizado por
           <Span>
-            <Link target="_blank" href="https://github.com/LoohanZero">
+            <Link target="_blank" href="https://lujansanchez.netlify.app/">
               Luján Sanchez
             </Link>
           </Span>
