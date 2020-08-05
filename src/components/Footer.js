@@ -101,8 +101,6 @@ const StyledFacebook = styled(Facebook)`
 `;
 const StyledPhone = styled(Phone)`
   height: 30px;
-
-
 `;
 const StyledInstagram = styled(Instagram)`
   height: 30px;
@@ -198,17 +196,17 @@ const Footer = () => {
             <Text>ventas@sipecarnicerias.com</Text>
           </SMLink>
         </SocialStyledContainer>
-        <SMPhoneLink target="_blank" href="tel:1147480283">
+        <SMPhoneLink target="_blank" href="tel:01147480283">
           <StyledPhone />
         </SMPhoneLink>
       </SocialNetContainer>
 
       <TelephoneContainer>
-        <Text>(011) 4748-0283</Text>
+        <SMLink href="tel:01147480283">(011) 4748-0283</SMLink>
         <Text>|</Text>
-        <Text>(011) 4741-6634</Text>
+        <SMLink href="tel:01147416634">(011) 4741-6634</SMLink>
         <Text>|</Text>
-        <Text>(011) 2058-1293</Text>
+        <SMLink href="tel:01120581293">(011) 2058-1293</SMLink>
       </TelephoneContainer>
 
       <CopyrightContainer>
