@@ -29,7 +29,7 @@ const BackgroundImage = styled.div`
   background-image: url(${asado});
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center; 
+  background-position: center;
   width: 100%;
   height: 100%;
   opacity: 0.2;
@@ -173,7 +173,7 @@ const Contacto = () => {
         <input
           type="hidden"
           name="_url"
-          value="https://yourdomain.co/contact.html"
+          value="https://www.sipecarnicerias.com/contact.html"
         ></input>
         <FadeInDiv>
           <FormStyles>
