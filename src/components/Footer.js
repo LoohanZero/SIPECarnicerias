@@ -15,10 +15,9 @@ const StyledFooter = styled.footer`
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  z-index: 300;
 
-  @media (max-width: 450px) {
-    height: 50px;
-  }
+
 `;
 
 const SocialNetContainer = styled.div`
@@ -36,7 +35,7 @@ const SocialNetContainer = styled.div`
     align-items: center;
   }
 
-  @media (max-width: 450px) {
+  @media (max-width: 500px) {
     flex-direction: row;
   }
 
@@ -61,7 +60,7 @@ const SocialStyledContainer = styled.div`
     padding: 5px;
   }
 
-  @media (max-width: 450px) {
+  @media (max-width: 500px) {
     width: 35%;
     justify-content: space-around;
   }
@@ -79,7 +78,7 @@ const SMLink = styled.a`
   text-decoration: none;
   display: flex;
 
-  @media (max-width: 450px) {
+  @media (max-width: 500px) {
     font-size: 11px;
   }
   &:hover {
@@ -92,7 +91,7 @@ const SMLink = styled.a`
 const SMPhoneLink = styled(SMLink)`
   display: none;
 
-  @media (max-width: 450px) {
+  @media (max-width: 500px) {
     display: block;
   }
 `;
@@ -120,7 +119,7 @@ const Text = styled.p`
   margin-bottom: 0;
   display: flex;
 
-  @media (max-width: 450px) {
+  @media (max-width: 500px) {
     display: none;
   }
 `;
@@ -135,9 +134,15 @@ const TelephoneContainer = styled(SocialNetContainer)`
 
 const CopyrightContainer = styled.div`
   display: flex;
+
   @media (max-width: 800px) {
-    display: none;
+    align-items: center;
   }
+
+  @media(max-width: 500px) {
+    flex-direction: column; 
+  }
+
 `;
 
 const Copyright = styled.p`
@@ -146,7 +151,7 @@ const Copyright = styled.p`
   margin: 0 3px;
   display: flex;
 
-  @media (max-width: 450px) {
+  @media (max-width: 500px) {
     font-size: 11px;
   }
 `;

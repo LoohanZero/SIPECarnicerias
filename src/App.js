@@ -21,11 +21,12 @@ body {
   flex-direction: column; 
   background-color: #171d20;
   color: #f7f6e7;
-  height: 100vh;
+  height: 100%;
+  box-sizing: content-box;
 
-  @media(max-width: 450px) {
-    height: calc(100vh - 50px);
-  }
+  /* @media(max-width: 450px) {
+    height: 100%;
+  } */
 }`;
 
 function App() {

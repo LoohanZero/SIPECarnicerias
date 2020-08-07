@@ -9,12 +9,15 @@ const Section = styled.section`
   background-size: cover;
   background-position: 0% 20%;
   width: 100%;
-  height: calc(100vh - 180px);
+  height: calc(100vh - 170px);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   overflow: hidden;
+  position: relative;
+
+
 
   @media (max-width: 450px) {
     height: calc(100vh - 170px);

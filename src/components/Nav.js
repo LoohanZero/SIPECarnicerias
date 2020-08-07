@@ -11,7 +11,6 @@ const StyledNav = styled.nav`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
- 
 `;
 const Container = styled.div`
   display: flex;
@@ -68,31 +67,27 @@ const StyledLink = styled(NavLink)`
   transition: 0.3s;
   padding: 15px;
   font-size: 25px;
-  width: 200px;
+  width: 220px;
   height: 100%;
   text-align: center;
 
   @media (max-width: 1120px) {
     font-size: 20px;
-    width: 150px;
+    /* width: 150px; */
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
-  @media (max-width: 900px) {
+  /* @media (max-width: 900px) {
     width: 120px;
-  }
+  } */
 
   @media (max-width: 450px) {
     padding: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-
-  @media (max-width: 280px) {
-    font-size: 13px;
   }
 
   &:hover {
@@ -114,7 +109,6 @@ const StyledLink = styled(NavLink)`
 const DropdownMenu = styled.div`
   display: flex;
   flex-direction: column;
-  position: relative;
   display: none;
 
   @media (max-width: 710px) {
@@ -130,61 +124,56 @@ const StyledMenu = styled(Menu)`
     height: 25px;
   }
 `;
+const BlurredContainer = styled.div`
+  width: 100%;
+  height: calc(100% - 70px);
+  top: 70px;
+  left: 0;
+  position: absolute;
+  backdrop-filter: ${(props) => (props.hidden ? "blur(0px)" : "blur(2px)")};
+  z-index: 10;
+`;
 
 const DropdownList = styled.ul`
   display: flex;
-  border-radius: 5px;
   overflow: hidden;
   flex-direction: column;
   list-style: none;
   background-color: #2a363b;
   position: absolute;
-  top: 40px;
-  left: -85px;
-  width: 200px;
-  height: 350px;
+  padding-top: 25px;
+  top: 69px;
+  left: 0;
+  width: 220px;
+  height: calc(100% - 70px);
   margin: 0;
   z-index: 100;
-
-  transform: ${(props) => (props.hidden ? "translateY(-10px)" : "40px")};
-  opacity: ${(props) => (props.hidden ? 0 : 0.9)};
-  transition: 0.3s;
-
-  @media (max-width: 500px) {
-    width: 150px;
-    left: -60px;
-  }
-
-  @media (max-width: 450px) {
-    left: -87px;
-  }
-
-  @media (max-width: 320px) {
-    width: 100px;
-    left: -45px;
-  }
+  transition: all 0.3s;
+  transform: ${(props) =>
+    props.hidden ? "translateX(-221px)" : "translateX(0px)"};
+  /* opacity: ${(props) => (props.hidden ? 0 : 1)}; */
+  backdrop-filter: blur(2px);
 `;
 
 const DropdownItem = styled.li`
-  height: 70px;
+  height: 90px;
   display: flex;
 `;
 const DropdownLink = styled(StyledLink)`
-  width: 200px;
+  width: 220px;
 
-  @media (max-width: 710px) {
+  /* @media (max-width: 710px) {
     width: 200px;
-  }
+  } */
 `;
 
 const Nav = () => {
   const [hidden, setHidden] = useState(true);
-
+  
   const handleMenuClick = () => {
     setHidden(!hidden);
-    console.log(hidden);
   };
-
+   
   return (
     <StyledNav>
       <Container>
@@ -212,34 +201,38 @@ const Nav = () => {
 
       <DropdownMenu>
         <StyledMenu onClick={handleMenuClick} />
-
-        <DropdownList onClick={handleMenuClick} hidden={hidden}>
-          <DropdownItem>
-            <DropdownLink exact activeClassName="selected" to="/">
-              Inicio
-            </DropdownLink>
-          </DropdownItem>
-          <DropdownItem>
-            <DropdownLink exact activeClassName="selected" to="/Nosotros">
-              Nosotros
-            </DropdownLink>
-          </DropdownItem>
-          <DropdownItem>
-            <DropdownLink exact activeClassName="selected" to="/Productos">
-              Productos
-            </DropdownLink>
-          </DropdownItem>
-          <DropdownItem>
-            <DropdownLink exact activeClassName="selected" to="/Reparto">
-              Reparto
-            </DropdownLink>
-          </DropdownItem>
-          <DropdownItem>
-            <DropdownLink exact activeClassName="selected" to="/Contacto">
-              Contacto
-            </DropdownLink>
-          </DropdownItem>
-        </DropdownList>
+        {!hidden && (
+          <>
+            <BlurredContainer hidden={hidden} />
+            <DropdownList onClick={handleMenuClick} hidden={hidden}>
+              <DropdownItem>
+                <DropdownLink exact activeClassName="selected" to="/">
+                  Inicio
+                </DropdownLink>
+              </DropdownItem>
+              <DropdownItem>
+                <DropdownLink exact activeClassName="selected" to="/Nosotros">
+                  Nosotros
+                </DropdownLink>
+              </DropdownItem>
+              <DropdownItem>
+                <DropdownLink exact activeClassName="selected" to="/Productos">
+                  Productos
+                </DropdownLink>
+              </DropdownItem>
+              <DropdownItem>
+                <DropdownLink exact activeClassName="selected" to="/Reparto">
+                  Reparto
+                </DropdownLink>
+              </DropdownItem>
+              <DropdownItem>
+                <DropdownLink exact activeClassName="selected" to="/Contacto">
+                  Contacto
+                </DropdownLink>
+              </DropdownItem>
+            </DropdownList>
+          </>
+        )}
       </DropdownMenu>
     </StyledNav>
   );
