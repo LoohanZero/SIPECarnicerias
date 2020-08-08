@@ -126,55 +126,6 @@ const StyledMenu = styled(Menu)`
     height: 25px;
   }
 `;
-// const AsideContainer = styled.div`
-//   min-height: calc(100% - 240px);
-//   height: calc(100% - 69px);
-//   overflow: hidden;
-// `;
-
-// const BlurredContainer = styled.div`
-// width: 100%;
-//   height: calc(100% - 69px);
-//   min-height: calc(100% - 240px);
-//   top: 70px;
-//   left: 0;
-//   position: absolute;
-//   backdrop-filter: ${(props) => (props.hidden ? "blur(0px)" : "blur(2px)")};
-//   z-index: 10;
-//  `;
-
-// const DropdownList = styled.ul`
-//   min-height: calc(100% - 240px);
-//   height: calc(100% - 70px);
-//   display: flex;
-//   flex-direction: column;
-//   list-style: none;
-//   background-color: #2a363b;
-//   position: absolute;
-//   padding-top: 25px;
-//   top: 69px;
-//   left: 0;
-//   width: 220px;
-//   margin: 0;
-//   z-index: 100;
-//   transition: all 0.3s;
-//   transform: ${(props) =>
-//     props.hidden ? "translateX(-221px)" : "translateX(0px)"};
-//   /* opacity: ${(props) => (props.hidden ? 0 : 1)}; */
-//   backdrop-filter: blur(2px);
-// `;
-
-// const DropdownItem = styled.li`
-//   height: 90px;
-//   display: flex;
-// `;
-// const DropdownLink = styled(StyledLink)`
-//   width: 220px;
-
-//   /* @media (max-width: 710px) {
-//     width: 200px;
-//   } */
-// `;
 
 const Nav = () => {
   const { handleMenuClick, hidden } = useContext(AsideContext);
@@ -207,38 +158,6 @@ const Nav = () => {
       <DropdownMenu>
         <StyledMenu onClick={handleMenuClick} />
         {!hidden && <Aside />}
-        {/* {!hidden && (
-          <AsideContainer>
-            <BlurredContainer hidden={hidden} />
-            <DropdownList onClick={handleMenuClick} hidden={hidden}>
-              <DropdownItem>
-                <DropdownLink exact activeClassName="selected" to="/">
-                  Inicio
-                </DropdownLink>
-              </DropdownItem>
-              <DropdownItem>
-                <DropdownLink exact activeClassName="selected" to="/Nosotros">
-                  Nosotros
-                </DropdownLink>
-              </DropdownItem>
-              <DropdownItem>
-                <DropdownLink exact activeClassName="selected" to="/Productos">
-                  Productos
-                </DropdownLink>
-              </DropdownItem>
-              <DropdownItem>
-                <DropdownLink exact activeClassName="selected" to="/Reparto">
-                  Reparto
-                </DropdownLink>
-              </DropdownItem>
-              <DropdownItem>
-                <DropdownLink exact activeClassName="selected" to="/Contacto">
-                  Contacto
-                </DropdownLink>
-              </DropdownItem>
-            </DropdownList>
-          </AsideContainer>
-        )} */}
       </DropdownMenu>
     </StyledNav>
   );

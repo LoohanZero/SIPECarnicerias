@@ -10,7 +10,6 @@ import QuienesSomos from "./pages/QuienesSomos";
 import ZonasDeReparto from "./pages/ZonasDeReparto";
 import Error from "./pages/Error";
 import { AsideProvider } from "./contexts/AsideContext";
-import ContainerDimensions from "react-container-dimensions";
 
 const GlobalStyle = createGlobalStyle`
 * {
@@ -34,38 +33,35 @@ body {
 }`;
 
 function App() {
-  
   return (
     <AsideProvider>
-      <ContainerDimensions>
-        <Router>
-          <GlobalStyle />
-          <Nav />
+      <Router>
+        <GlobalStyle />
+        <Nav />
 
-          <Switch>
-            <Route exact path="/">
-              <Home />
-            </Route>
-            <Route exact path="/Nosotros">
-              <QuienesSomos />
-            </Route>
-            <Route exact path="/Productos">
-              <NuestrosProductos />
-            </Route>
-            <Route exact path="/Reparto">
-              <ZonasDeReparto />
-            </Route>
-            <Route exact path="/Contacto">
-              <Contacto />
-            </Route>
-            <Route>
-              <Error text="Page Not Found" />
-            </Route>
-          </Switch>
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route exact path="/Nosotros">
+            <QuienesSomos />
+          </Route>
+          <Route exact path="/Productos">
+            <NuestrosProductos />
+          </Route>
+          <Route exact path="/Reparto">
+            <ZonasDeReparto />
+          </Route>
+          <Route exact path="/Contacto">
+            <Contacto />
+          </Route>
+          <Route>
+            <Error text="Page Not Found" />
+          </Route>
+        </Switch>
 
-          <Footer />
-        </Router>
-      </ContainerDimensions>
+        <Footer />
+      </Router>
     </AsideProvider>
   );
 }

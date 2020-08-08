@@ -1,8 +1,8 @@
-import React, { useContext } from "react";
+import React from "react";
 import styled, { keyframes } from "styled-components";
 import { zoomIn } from "react-animations";
 import image from "../imgs/Nosotros.jpg";
-import AsideContext from "../contexts/AsideContext";
+
 
 const Section = styled.section`
   height: 100%;
@@ -12,7 +12,7 @@ const Section = styled.section`
   align-items: center;
   position: relative;
   min-height: calc(100vh - 170px);
-  overflow:hidden;
+  overflow: hidden;
 
   /* @media  (min-height: 800px) {
     height: calc(100vh - 180px);
@@ -80,11 +80,7 @@ const ZoomInTextDiv = styled.div`
   animation: 0.5s ${zoomInAnimation};
 `;
 
-const QuienesSomos = ({ height }) => {
-  const { SetDimensions } = useContext(AsideContext);
-
-  SetDimensions(height);
-
+const QuienesSomos = () => {
   return (
     image && (
       <Section>

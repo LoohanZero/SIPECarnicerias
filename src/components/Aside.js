@@ -1,8 +1,8 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import styled, { keyframes } from "styled-components";
 import { NavLink } from "react-router-dom";
 import AsideContext from "../contexts/AsideContext";
-import { fadeInLeft } from "react-animations";
+import { fadeInLeft, fadeOutLeft } from "react-animations";
 
 const Container = styled.div`
   min-height: calc(100vh - 240px);
@@ -12,16 +12,9 @@ const Container = styled.div`
   position: absolute;
   top: 70px;
   left: 0;
-  backdrop-filter: ${(props) => (props.hidden ? "blur(0px)" : "blur(2px)")};
+  backdrop-filter: ${(props) => (props.show ? "blur(2px)" : "blur(0px)")};
   z-index: 150;
 `;
-
-// const fadeInAnimation = keyframes`${fadeIn}`;
-
-// const FadeInDiv = styled.div`
-//   animation: 0.3s ${fadeInAnimation};
-// `;
-
 
 const DropdownList = styled.ul`
   min-height: calc(100vh - 70px);
@@ -37,10 +30,6 @@ const DropdownList = styled.ul`
   width: 220px;
   margin: 0;
   z-index: 200;
-  /* transition: all 0.3s;
-  ransform: ${(props) =>
-    props.hidden ? "translateX(-221px)" : "translateX(0px)"}; */
-//   /* opacity: ${(props) => (props.hidden ? 0 : 1)}; */
 `;
 
 const DropdownItem = styled.li`
@@ -61,15 +50,10 @@ const StyledLink = styled(NavLink)`
 
   @media (max-width: 1120px) {
     font-size: 20px;
-    /* width: 150px; */
     display: flex;
     align-items: center;
     justify-content: center;
   }
-
-  /* @media (max-width: 900px) {
-    width: 120px;
-  } */
 
   @media (max-width: 450px) {
     padding: 0;
@@ -95,25 +79,47 @@ const StyledLink = styled(NavLink)`
 `;
 // ------------ANIMATIONS ----------------
 
-
-
 const fadeInLeftAnimation = keyframes`${fadeInLeft}`;
 
-const FadeInLeftDiv = styled.div`
-  animation: 0.5s ${fadeInLeftAnimation};
+const fadeOutLeftAnimation = keyframes`
+0% {
+  transform: translateX(0px);
+}
+100% {
+  transform: translateX(-221px;);
+}`;
+
+const FadeLeftDiv = styled.div`
+  animation: 0.5s
+    ${(props) => (props.show ? fadeInLeftAnimation : fadeOutLeftAnimation)};
+  opacity: ${(props) => props.show && "1"};
+  transition-property: opacity;
+  transition-duration: 0.3s;
+  transition-delay: 0.3s;
   z-index: 100;
   min-height: calc(100vh - 70px);
   height: 100%;
 `;
 
 const Aside = () => {
-  const { handleMenuClick, hidden } = useContext(AsideContext);
+  const { handleMenuClick, show, setRender, shouldRender } = useContext(
+    AsideContext
+  );
+
+  useEffect(() => {
+    show && setTimeout(setRender(true), 2000);
+    show &&
+      setTimeout(
+        console.log({ funcion: useEffect, elshow: show, setRender: true }),
+        2000
+      );
+  }, [show]);
 
   return (
     <Container>
-        {!hidden && (
-        <FadeInLeftDiv>
-          <DropdownList onClick={handleMenuClick} hidden={hidden}>
+      {show && (
+        <FadeLeftDiv show={show}>
+          <DropdownList onClick={handleMenuClick} show={show}>
             <DropdownItem>
               <StyledLink exact activeClassName="selected" to="/">
                 Inicio
@@ -140,7 +146,7 @@ const Aside = () => {
               </StyledLink>
             </DropdownItem>
           </DropdownList>
-        </FadeInLeftDiv>
+        </FadeLeftDiv>
       )}
     </Container>
   );

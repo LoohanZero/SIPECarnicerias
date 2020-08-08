@@ -3,15 +3,25 @@ import React, { createContext, useState } from "react";
 const AsideContext = createContext();
 
 const AsideProvider = ({ children }) => {
-  const [hidden, setHidden] = useState(true);
-  const [dimensions, SetDimensions] = useState()
+  const [show, setShow] = useState(false);
+  const [shouldRender, setRender] = useState(show);
 
+  // console.log(show)
   const handleMenuClick = () => {
-    setHidden(!hidden);
+    setShow(!show);
+    !show && setRender(false);
+
+    console.log({
+      funcion: "handleMenuClick",
+      elshow: show,
+      setRender: false,
+    });
   };
 
   return (
-    <AsideContext.Provider value={{ dimensions, hidden, SetDimensions, handleMenuClick }}>
+    <AsideContext.Provider
+      value={{ show, handleMenuClick, shouldRender, setRender }}
+    >
       {children}
     </AsideContext.Provider>
   );
@@ -19,4 +29,3 @@ const AsideProvider = ({ children }) => {
 
 export default AsideContext;
 export { AsideProvider };
-
