@@ -12,7 +12,7 @@ const Container = styled.div`
   position: absolute;
   top: 70px;
   left: 0;
-  backdrop-filter: ${(props) => (props.show ? "blur(0px)" : "blur(2px)")};
+  backdrop-filter: ${(props) => (props.show ? "blur(2px)" : "blur(0px)")};
   z-index: 150;
 `;
 
@@ -116,7 +116,7 @@ const Aside = () => {
   }, [show]);
 
   return ( show &&
-    <Container>
+    <Container show={show}>
       
         <FadeLeftDiv show={show}>
           <DropdownList onClick={handleMenuClick} show={show}>
