@@ -30,7 +30,7 @@ const BlurredContainer = styled.div`
   left: 0;
   position: absolute;
   backdrop-filter: blur(2px);
-  z-index: 10;
+  z-index: 15;
 `;
 
 const DropdownList = styled.ul`
