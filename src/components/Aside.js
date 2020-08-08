@@ -13,7 +13,7 @@ const Container = styled.div`
 const fadeInRightAnimation = keyframes`${fadeInRight}`;
 
 const FadeInRightDiv = styled.div`
-  animation: 0.3s ${fadeInRightAnimation} 0.5s;
+  animation: 0.5s ${fadeInRightAnimation};
 `;
 
 const fadeInAnimation = keyframes`${fadeIn}`;
@@ -29,7 +29,7 @@ const BlurredContainer = styled.div`
   top: 70px;
   left: 0;
   position: absolute;
-  backdrop-filter: ${(props) => (props.hidden ? "blur(0px)" : "blur(2px)")};
+  backdrop-filter: blur(2px);
   z-index: 10;
 `;
 
@@ -107,19 +107,13 @@ const StyledLink = styled(NavLink)`
 `;
 
 const Aside = () => {
-  const { handleMenuClick, hidden, dimensions } = useContext(AsideContext);
+  const { handleMenuClick, hidden } = useContext(AsideContext);
 
   return (
     <Container>
-      <FadeInDiv>
-        <BlurredContainer height={dimensions} hidden={hidden} />
-      </FadeInDiv>
+      {!hidden && <BlurredContainer />}
       <FadeInRightDiv>
-        <DropdownList
-          height={dimensions}
-          onClick={handleMenuClick}
-          hidden={hidden}
-        >
+        <DropdownList onClick={handleMenuClick} hidden={hidden}>
           <DropdownItem>
             <StyledLink exact activeClassName="selected" to="/">
               Inicio
