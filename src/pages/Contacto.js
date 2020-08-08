@@ -5,6 +5,7 @@ import asado from "../imgs/AsadoContacto.jpeg";
 
 const Section = styled.section`
   height: 100%;
+  min-height: calc(100vh - 170px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,13 +13,14 @@ const Section = styled.section`
   font-family: "Oswald", Verdana, Geneva, Tahoma, sans-serif;
   overflow: hidden;
   position: relative;
-
+  
+/* 
   @media (min-height: 800px) {
     height: calc(100vh - 180px);
-  }
+  } */
 
   @media (max-width: 411px) {
-    height: 105%;
+    /* height: 105%; */
     padding-bottom: 50px;
   }
 `;

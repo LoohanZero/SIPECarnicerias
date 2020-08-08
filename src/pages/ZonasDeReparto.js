@@ -10,14 +10,15 @@ const Section = styled.section`
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  min-height: calc(100vh - 170px);
 
-  @media (max-width: 1024px) and (min-height: 1366px) {
+  /* @media (max-width: 1024px) and (min-height: 1366px) {
     height: calc(100vh - 180px);
   }
 
   @media (min-height: 800px) {
     height: calc(100vh - 180px);
-  }
+  } */
 `;
 
 const InfoContainer = styled.div`

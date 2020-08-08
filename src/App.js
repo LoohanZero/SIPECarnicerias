@@ -9,6 +9,8 @@ import NuestrosProductos from "./pages/NuestrosProductos";
 import QuienesSomos from "./pages/QuienesSomos";
 import ZonasDeReparto from "./pages/ZonasDeReparto";
 import Error from "./pages/Error";
+import { AsideProvider } from "./contexts/AsideContext";
+import ContainerDimensions from "react-container-dimensions";
 
 const GlobalStyle = createGlobalStyle`
 * {
@@ -22,6 +24,7 @@ body {
   background-color: #171d20;
   color: #f7f6e7;
   height: 100%;
+  min-height: 100vh;
   box-sizing: content-box;
 
   /* @media(max-width: 450px) {
@@ -30,34 +33,39 @@ body {
 }`;
 
 function App() {
+  
   return (
-    <Router>
-      <GlobalStyle />
-      <Nav />
+    <AsideProvider>
+      <ContainerDimensions>
+        <Router>
+          <GlobalStyle />
+          <Nav />
 
-      <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route exact path="/Nosotros">
-          <QuienesSomos />
-        </Route>
-        <Route exact path="/Productos">
-          <NuestrosProductos />
-        </Route>
-        <Route exact path="/Reparto">
-          <ZonasDeReparto />
-        </Route>
-        <Route exact path="/Contacto">
-          <Contacto />
-        </Route>
-        <Route>
-          <Error text="Page Not Found"  />
-        </Route>
-      </Switch>
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route exact path="/Nosotros">
+              <QuienesSomos />
+            </Route>
+            <Route exact path="/Productos">
+              <NuestrosProductos />
+            </Route>
+            <Route exact path="/Reparto">
+              <ZonasDeReparto />
+            </Route>
+            <Route exact path="/Contacto">
+              <Contacto />
+            </Route>
+            <Route>
+              <Error text="Page Not Found" />
+            </Route>
+          </Switch>
 
-      <Footer />
-    </Router>
+          <Footer />
+        </Router>
+      </ContainerDimensions>
+    </AsideProvider>
   );
 }
 

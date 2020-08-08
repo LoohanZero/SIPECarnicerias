@@ -10,15 +10,16 @@ import milanesa from "../imgs/MilanesaCuadrada.jpg";
 
 const Section = styled.section`
   width: 100%;
-  height: 85%;
+  height: 100%;
+  min-height: calc(100vh - 170px);
 
-  @media (max-width: 1024px) and (max-height: 1366px) {
+  /* @media (max-width: 1024px) and (max-height: 1366px) {
     height: 90%;
   }
 
   @media (max-width: 300px) {
     height: 100%;
-  }
+  } */
 `;
 
 const SectionTitle = styled.h1`

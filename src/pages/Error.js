@@ -4,7 +4,8 @@ import errorImage from "../imgs/Error.png";
 import { bounceInDown, headShake } from "react-animations";
 
 const Container = styled.div`
-  height: calc(100vh - 120px);
+  height: 100%;
+  min-height: calc(100vh - 170px);
   width: 100%;
   display: flex;
   flex-direction: column;
