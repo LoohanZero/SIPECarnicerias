@@ -2,57 +2,45 @@ import React, { useContext } from "react";
 import styled, { keyframes } from "styled-components";
 import { NavLink } from "react-router-dom";
 import AsideContext from "../contexts/AsideContext";
-import { fadeInRight, fadeIn } from "react-animations";
+import { fadeInLeft } from "react-animations";
 
 const Container = styled.div`
-  min-height: calc(100% - 240px);
-  height: calc(100% - 69px);
-  overflow: hidden;
-`;
-
-const fadeInRightAnimation = keyframes`${fadeInRight}`;
-
-const FadeInRightDiv = styled.div`
-  animation: 0.5s ${fadeInRightAnimation};
-`;
-
-const fadeInAnimation = keyframes`${fadeIn}`;
-
-const FadeInDiv = styled.div`
-  animation: 0.3s ${fadeInAnimation};
-`;
-
-const BlurredContainer = styled.div`
+  min-height: calc(100vh - 240px);
+  height: calc(100% - 70px);
   width: 100%;
-  height: calc(100% - 69px);
-  min-height: calc(100% - 240px);
+  overflow: hidden;
+  position: absolute;
   top: 70px;
   left: 0;
-  position: absolute;
-  backdrop-filter: blur(2px);
-  z-index: 15;
+  backdrop-filter: ${(props) => (props.hidden ? "blur(0px)" : "blur(2px)")};
+  z-index: 150;
 `;
 
+// const fadeInAnimation = keyframes`${fadeIn}`;
+
+// const FadeInDiv = styled.div`
+//   animation: 0.3s ${fadeInAnimation};
+// `;
+
+
 const DropdownList = styled.ul`
-  min-height: calc(100% - 240px);
-  height: calc(100% - 70px);
+  min-height: calc(100vh - 70px);
+  height: 100%;
   display: flex;
   flex-direction: column;
   list-style: none;
   background-color: #2a363b;
   position: absolute;
   padding-top: 25px;
-  top: 69px;
+  position: relative;
   left: 0;
   width: 220px;
   margin: 0;
-  z-index: 100;
+  z-index: 200;
   /* transition: all 0.3s;
-  transform: ${(props) =>
-    props.hidden ? "translateX(-221px)" : "translateX(0px)"};
-  opacity: ${(props) => (props.hidden ? 0 : 1)}; */
-  backdrop-filter: blur(2px);
-  
+  ransform: ${(props) =>
+    props.hidden ? "translateX(-221px)" : "translateX(0px)"}; */
+//   /* opacity: ${(props) => (props.hidden ? 0 : 1)}; */
 `;
 
 const DropdownItem = styled.li`
@@ -105,15 +93,26 @@ const StyledLink = styled(NavLink)`
     background-color: #3f4a4e;
   }
 `;
+// ------------ANIMATIONS ----------------
+
+
+
+const fadeInLeftAnimation = keyframes`${fadeInLeft}`;
+
+const FadeInLeftDiv = styled.div`
+  animation: 0.5s ${fadeInLeftAnimation};
+  z-index: 100;
+  min-height: calc(100vh - 70px);
+  height: 100%;
+`;
 
 const Aside = () => {
   const { handleMenuClick, hidden } = useContext(AsideContext);
 
   return (
     <Container>
-      {!hidden && <BlurredContainer />}
-      {!hidden && (
-        <FadeInRightDiv>
+        {!hidden && (
+        <FadeInLeftDiv>
           <DropdownList onClick={handleMenuClick} hidden={hidden}>
             <DropdownItem>
               <StyledLink exact activeClassName="selected" to="/">
@@ -141,7 +140,7 @@ const Aside = () => {
               </StyledLink>
             </DropdownItem>
           </DropdownList>
-        </FadeInRightDiv>
+        </FadeInLeftDiv>
       )}
     </Container>
   );

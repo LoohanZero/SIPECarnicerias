@@ -26,6 +26,7 @@ body {
   height: 100%;
   min-height: 100vh;
   box-sizing: content-box;
+  position: relative;
 
   /* @media(max-width: 450px) {
     height: 100%;
