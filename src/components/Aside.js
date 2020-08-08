@@ -112,35 +112,37 @@ const Aside = () => {
   return (
     <Container>
       {!hidden && <BlurredContainer />}
-      <FadeInRightDiv>
-        <DropdownList onClick={handleMenuClick} hidden={hidden}>
-          <DropdownItem>
-            <StyledLink exact activeClassName="selected" to="/">
-              Inicio
-            </StyledLink>
-          </DropdownItem>
-          <DropdownItem>
-            <StyledLink exact activeClassName="selected" to="/Nosotros">
-              Nosotros
-            </StyledLink>
-          </DropdownItem>
-          <DropdownItem>
-            <StyledLink exact activeClassName="selected" to="/Productos">
-              Productos
-            </StyledLink>
-          </DropdownItem>
-          <DropdownItem>
-            <StyledLink exact activeClassName="selected" to="/Reparto">
-              Reparto
-            </StyledLink>
-          </DropdownItem>
-          <DropdownItem>
-            <StyledLink exact activeClassName="selected" to="/Contacto">
-              Contacto
-            </StyledLink>
-          </DropdownItem>
-        </DropdownList>
-      </FadeInRightDiv>
+      {!hidden && (
+        <FadeInRightDiv>
+          <DropdownList onClick={handleMenuClick} hidden={hidden}>
+            <DropdownItem>
+              <StyledLink exact activeClassName="selected" to="/">
+                Inicio
+              </StyledLink>
+            </DropdownItem>
+            <DropdownItem>
+              <StyledLink exact activeClassName="selected" to="/Nosotros">
+                Nosotros
+              </StyledLink>
+            </DropdownItem>
+            <DropdownItem>
+              <StyledLink exact activeClassName="selected" to="/Productos">
+                Productos
+              </StyledLink>
+            </DropdownItem>
+            <DropdownItem>
+              <StyledLink exact activeClassName="selected" to="/Reparto">
+                Reparto
+              </StyledLink>
+            </DropdownItem>
+            <DropdownItem>
+              <StyledLink exact activeClassName="selected" to="/Contacto">
+                Contacto
+              </StyledLink>
+            </DropdownItem>
+          </DropdownList>
+        </FadeInRightDiv>
+      )}
     </Container>
   );
 };
