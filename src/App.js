@@ -5,9 +5,9 @@ import Contacto from "./pages/Contacto";
 import Home from "./pages/Home";
 import Footer from "./components/Footer";
 import Nav from "components/Nav";
-import NuestrosProductos from "./pages/NuestrosProductos";
-import QuienesSomos from "./pages/QuienesSomos";
-import ZonasDeReparto from "./pages/ZonasDeReparto";
+import NuestrosProductos from "./pages/Productos";
+import QuienesSomos from "./pages/Nosotros";
+import ZonasDeReparto from "./pages/Reparto";
 import Error from "./pages/Error";
 import { AsideProvider } from "./contexts/AsideContext";
 

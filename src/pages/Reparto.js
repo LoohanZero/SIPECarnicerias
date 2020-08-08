@@ -41,7 +41,6 @@ const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding-top: 10px;
 
   @media (max-width: 1200px) {
     margin-left: 0;
@@ -59,6 +58,7 @@ const UbicationContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-top: 10px;
 
   @media (max-width: 1200px) {
     padding: 10px 0;
