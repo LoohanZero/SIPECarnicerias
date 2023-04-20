@@ -1,7 +1,6 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
 import { fadeInRight, fadeInLeft, fadeInUp } from "react-animations";
-import logo from "../imgs/Logolimpiosf.png";
 import homeImage from "../imgs/HomeImage.jpeg";
 
 const Section = styled.section`
@@ -107,9 +106,6 @@ const Home = () => {
               <Text>Reparto a domicilio, venta por mayor y menor</Text>
             </FadeInUpDiv>
           </TextContainer>
-          <FadeInRightDiv>
-            <StyledLogo src={logo} />
-          </FadeInRightDiv>
         </FlexContainer>
       </Section>
     )
