@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
-import logo from "../imgs/Logolimpiosf.png";
 import { Menu } from "@styled-icons/ionicons-solid/Menu";
 import Aside from "./Aside";
 import AsideContext from "../contexts/AsideContext";
@@ -133,7 +132,6 @@ const Nav = () => {
   return (
     <StyledNav>
       <Container>
-        <Image src={logo} />
         <Text>SIPE Carnicerías</Text>
       </Container>
 
