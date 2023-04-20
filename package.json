@@ -15,7 +15,7 @@
     "react-bootstrap": "^1.3.0",
     "react-container-dimensions": "^1.4.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1",
+    "react-scripts": "5.0.1",
     "styled-dropdown-component": "^4.0.0",
     "styled-icons": "^10.15.0"
   },
