@@ -113,6 +113,7 @@ const Aside = () => {
         console.log({ funcion: useEffect, elshow: show, setRender: true }),
         2000
       );
+      // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [show]);
 
   return ( show &&
