@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
-import logo from "../imgs/Logolimpiosf.png";
 import { Menu } from "@styled-icons/ionicons-solid/Menu";
 import Aside from "./Aside";
 import AsideContext from "../contexts/AsideContext";
@@ -33,19 +32,12 @@ const Container = styled.div`
   }
 `;
 
-const Image = styled.img`
-  height: 35px;
-
-  @media (max-width: 320px) {
-    height: 25px;
-  }
-`;
-
 const Text = styled.h1`
-  font-size: 15px;
+  font-size: 25px;
   font-family: "Oswald", Verdana, Geneva, Tahoma, sans-serif;
   padding: 0 10px;
   margin: 0;
+  color: white;
 
   @media (max-width: 320px) {
     line-height: 25px;
@@ -133,7 +125,6 @@ const Nav = () => {
   return (
     <StyledNav>
       <Container>
-        <Image src={logo} />
         <Text>SIPE Carnicerías</Text>
       </Container>
 

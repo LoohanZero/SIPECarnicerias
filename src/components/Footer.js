@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Facebook } from "@styled-icons/entypo-social/Facebook";
 import { Instagram } from "@styled-icons/fa-brands/Instagram";
 import { WhatsappSquare } from "@styled-icons/fa-brands/WhatsappSquare";
-import { Mail } from "@styled-icons/heroicons-outline/Mail";
+import { Mail } from "@styled-icons/entypo/Mail";
 import { Phone } from "@styled-icons/boxicons-solid/Phone";
 
 const StyledFooter = styled.footer`

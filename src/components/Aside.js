@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from "react";
 import styled, { keyframes } from "styled-components";
 import { NavLink } from "react-router-dom";
 import AsideContext from "../contexts/AsideContext";
-import { fadeInLeft, fadeOutLeft } from "react-animations";
+import { fadeInLeft } from "react-animations";
 
 const Container = styled.div`
   min-height: calc(100vh - 240px);
@@ -102,7 +102,7 @@ const FadeLeftDiv = styled.div`
 `;
 
 const Aside = () => {
-  const { handleMenuClick, show, setRender, shouldRender } = useContext(
+  const { handleMenuClick, show, setRender } = useContext(
     AsideContext
   );
 

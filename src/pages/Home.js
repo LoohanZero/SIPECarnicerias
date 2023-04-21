@@ -1,7 +1,6 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
-import { fadeInRight, fadeInLeft, fadeInUp } from "react-animations";
-import logo from "../imgs/Logolimpiosf.png";
+import { fadeInLeft, fadeInUp } from "react-animations";
 import homeImage from "../imgs/HomeImage.jpeg";
 
 const Section = styled.section`
@@ -61,21 +60,7 @@ const Text = styled.p`
   }
 `;
 
-const StyledLogo = styled.img`
-  height: 165px;
-
-  @media (max-width: 450px) {
-    height: 110px;
-  }
-`;
-
 // ------------ANIMATIONS-----------
-
-const fadeInRightAnimation = keyframes`${fadeInRight}`;
-
-const FadeInRightDiv = styled.div`
-  animation: 0.5s ${fadeInRightAnimation};
-`;
 
 const fadeInLeftAnimation = keyframes`${fadeInLeft}`;
 
@@ -93,7 +78,6 @@ const TextContainer = styled.div``;
 
 const Home = () => {
   return (
-    logo && (
       <Section>
         <FlexContainer>
           <TextContainer>
@@ -107,12 +91,8 @@ const Home = () => {
               <Text>Reparto a domicilio, venta por mayor y menor</Text>
             </FadeInUpDiv>
           </TextContainer>
-          <FadeInRightDiv>
-            <StyledLogo src={logo} />
-          </FadeInRightDiv>
         </FlexContainer>
       </Section>
-    )
   );
 };
 
